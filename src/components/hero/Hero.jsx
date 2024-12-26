@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import slide1 from '../../assets/images/slider-images/slide4.jpg';
-import logo from '../../assets/images/logos/logo.svg';
+import logo from '../../assets/images/logos/Logo.svg';
 import { FaArrowRight } from 'react-icons/fa';
 
 
