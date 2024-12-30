@@ -1,6 +1,6 @@
 :root {
     --primary-color-1: #495f58;
-    --primary-color-1-transparent: rgb(73 95 88 /.1);
+    --primary-color-1-transparent: rgb(73 95 88 /.35);
     --primary-color-2: #f4ce14;
     --secondary-color-1: #EE9972;
     --secondary-color-2: #FBDABB;
@@ -79,8 +79,9 @@ main {
 /* Hero slider */
 
   .hero-slider {
-    height: 80vh;
+    height: 70vh;
     width: 100%;
+    position: relative;
 }
 
 .slider-content {
@@ -159,7 +160,10 @@ main {
   }
 
 
+/* Media queries */
+@media screen and (min-width: 1920px) {
+    main {
+        width: 1920px;
+    }
 
-  
-
-
+}

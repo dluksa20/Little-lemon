@@ -1,6 +1,5 @@
 .app {
     margin-left: 100px;
-    /* padding: 1.25rem; */
 }
 
 @media screen and (max-width: 768px) {
@@ -8,4 +7,12 @@
         margin-left: 80px;
     }
     
+}
+
+/* Media queries */
+@media screen and (min-width: 1920px) {
+    .app {
+        justify-self: center;
+    }
+
 }
