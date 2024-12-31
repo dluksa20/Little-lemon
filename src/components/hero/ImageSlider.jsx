@@ -29,9 +29,7 @@ const ImageSlider = ({ slides, children,style, className}) => {
                 ))}
             </div>
             <div className='slider-overlay'>
-                <div className='slider-content-container'>
-                    {children}
-                </div>
+                {children}
             </div>
 
             <button

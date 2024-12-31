@@ -1,6 +1,6 @@
 :root { 
     --primary-color-1: rgb(73 95 68/0.6 );
-    --primary-color-2: #f4ce14;
+    --primary-color-2: rgb(235, 214, 102);
     --primary-color-2-transparent: rgb(73 95 68/0.1);
     --secondary-color-1: #EE9972;
     --secondary-color-2: #FBDABB;
@@ -18,5 +18,5 @@
 
 
 html, body {
-    background-color: var(--primary-color-2-transparent);
+    background-color: rgb(239, 228, 167);;
 }
