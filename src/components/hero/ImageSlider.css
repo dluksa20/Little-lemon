@@ -9,7 +9,7 @@
     width: 100%;
     display: flex;
     overflow: hidden;
-    /* border-radius: 1.5rem; */
+    border-radius: 1.5rem;
     position: absolute;
 
 }

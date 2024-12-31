@@ -77,9 +77,10 @@ main {
 /* Hero slider */
 
   .hero-slider {
-    height: 80vh;
+    min-height: 768px;
     width: 100%;
     position: relative;
+    /* overflow: hidden; */
 }
 
 .slider-content {
@@ -212,5 +213,8 @@ main {
     }
     .hero-buttons {
         display: none;
+    }
+    .hero-slider {
+        min-height: 560px;
     }
 }
