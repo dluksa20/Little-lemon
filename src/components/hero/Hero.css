@@ -174,7 +174,7 @@ main {
     }
     .slider-content {
         gap: .1rem;
-        grid-column: 3 / span 8;
+        grid-column: 2 / span 10;
         grid-row: 2 / span 8;
     }
 
@@ -216,5 +216,20 @@ main {
     }
     .hero-slider {
         min-height: 560px;
+    }
+    .slider-content {
+        gap: .1rem;
+        grid-column: 3 / span 8;
+        grid-row: 2 / span 8;
+    }
+    .slider-content h1 {
+        font-size: var(--f-md);
+        letter-spacing: 1px;
+    }
+    .slider-content h2 {
+        font-size: var(--f-sm);
+    }
+    .slider-content p {
+        font-size: var(--f-sm);
     }
 }

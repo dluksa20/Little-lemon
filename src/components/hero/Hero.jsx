@@ -26,7 +26,6 @@ const Hero = () => {
         <div className='slider-content'>
           <h1 className='hero-title'>Little Lemon</h1>
           <h2>Chicago</h2>
-          <br />
           <p className='hero-subtitle'>Authentic Mediterranean Flavors with a Modern Twist</p>
           {/* Explore the Menu Button */}
           <button className='explore-menu-button'>
