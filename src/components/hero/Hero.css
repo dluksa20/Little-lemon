@@ -23,14 +23,14 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 /* Hero slider */
 .hero-slider {
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .hero-content {
