@@ -32,6 +32,12 @@ const Hero = () => {
           <button className='explore-menu-button'>
             Explore the Menu <FaArrowRight />
           </button>
+          <button className='hero-button-sm'>
+            Book Now
+          </button>
+          <button className='hero-button-sm'>
+            Order Online
+          </button>
         </div>
 
       </ImageSlider>

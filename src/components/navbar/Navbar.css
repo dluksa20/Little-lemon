@@ -41,6 +41,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-family: var(--f-header);
     font-weight: var(--f-bold);
@@ -75,16 +76,30 @@ body {
 @media (max-width: 768px) {
     .nav-wrapper {
         width: 80px; /* Adjust the width for smaller screens */
+        height: 80px;
+        width: 100vw;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
     .nav-links, .nav-icons {
-        gap: 1.5rem;
+        /* gap: 1.5rem; */
+        display: flex;
+        width: 70%;
+        
+    }
+    .nav-icons {
+        width: 30%;
+
     }
 
     .nav-links a span, .nav-icons a span {
-        font-size: 0.8rem; /* Reduce font size on smaller screens */
+        font-size: 0.8rem; 
+        height: 100%;
     }
     .nav-links a svg, .nav-icons a svg {
         font-size: 1.75rem; 
+        height: 100%;
     }
 }

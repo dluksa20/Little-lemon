@@ -1,4 +1,4 @@
-import React, { useState, useMemo, Children } from 'react';
+import React, { useState } from 'react';
 import './ImageSlider.css';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
@@ -17,11 +17,11 @@ const ImageSlider = ({ slides, children,style, className}) => {
     return (
         <div className={className} style={{...style}}>
             <div className="slider-wrapper">
-                {slides.map(slide => (
+                {slides.map((slide, index) => (
                     <img
-                        key={slide}
+                        key={index}
                         src={slide}
-                        alt={`slide-${slide}`}
+                        alt={`slide-${index}`}
                         className="slider-img"
                         loading='lazy'
                         style={{ translate: `${-100 * current}%` }}
@@ -35,23 +35,22 @@ const ImageSlider = ({ slides, children,style, className}) => {
             </div>
 
             <button
-                className="slider-btn"
+                className="slider-btn slider-btn-left"
                 onClick={prevSlide}
-                style={{ left: 0, borderRadius: '1.5rem 0 0 1.5rem' }}
             >
                 <MdChevronLeft />
             </button>
             <button
-                className="slider-btn"
+                className="slider-btn slider-btn-right"
                 onClick={nextSlide}
-                style={{ right: 0, borderRadius: '0 1.5rem 1.5rem 0' }}
             >
                 <MdChevronRight />
             </button>
 
             <div className='slider-dots'>
                 {slides.map((_, index) => (
-                    <div 
+                    <div
+                    key={index} 
                     className={index === current ? 'active' : ''}
                     onClick={() => setCurrent(index)}></div>
                 ))}

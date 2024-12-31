@@ -11,6 +11,7 @@
     --f-header: 'Karla', 'sans-serif';
     --f-text: 'Markazi Text', 'sans-serif';
     --f-bold: 600;
+    --f-sm: 1rem;
     --f-md: 2rem;
     --f-lg: 3rem;
     --f-xl: 4rem;
@@ -22,9 +23,6 @@ main {
     padding: 2rem;
     position: relative;
 }
-
-/* Hero.css */
-
 
 
 /* Hero top navigation */
@@ -58,7 +56,7 @@ main {
     padding: 1rem 3rem;
     background-color: var(--primary-color-2); 
     color: var(--highlight-color-2); 
-    font-size: 1.2rem;
+    font-size: var(--f-sm);
     font-family: var(--f-header);
     font-weight: var(--f-bold);
     border: none;
@@ -79,7 +77,7 @@ main {
 /* Hero slider */
 
   .hero-slider {
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     position: relative;
 }
@@ -125,7 +123,7 @@ main {
     letter-spacing: 3px;
 }
 
-.explore-menu-button {
+.explore-menu-button, .hero-button-sm {
     background-color: var(--primary-color-2);
     color: var(--highlight-color-2);
     padding: 1rem 2rem;
@@ -140,6 +138,9 @@ main {
     cursor: pointer;
     gap: 1rem;
     transition: all 0.3s ease;
+  }
+  .hero-button-sm {
+    display: none;
   }
   
   .explore-menu-button:hover {
@@ -159,11 +160,57 @@ main {
     transform: translateX(5px); /* Arrow moves when button is hovered */
   }
 
-
-/* Media queries */
-@media screen and (min-width: 1920px) {
-    main {
-        width: 1920px;
+@media screen and (max-width: 1024px) {
+    .hero-logo-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .hero-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .slider-content {
+        gap: .1rem;
+        grid-column: 3 / span 8;
+        grid-row: 2 / span 8;
     }
 
+    .slider-content h1 {
+        font-size: var(--f-lg);
+        letter-spacing: 1px;
+    }
+    .slider-content h2 {
+        font-size: var(--f-md);
+    }
+    .slider-content p {
+        font-size: var(--f-md);
+    }
+    .explore-menu-button {
+        display: none;
+    }
+    .hero-button-sm {
+        font-size: var(--f-sm);
+        display: flex;
+        margin-bottom: .2rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0;
+
+    }
+    .hero-logo-wrapper {
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+    .hero-slider {
+        border-radius: 0;
+    }
+    .hero-buttons {
+        display: none;
+    }
 }

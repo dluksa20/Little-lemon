@@ -4,15 +4,8 @@
 
 @media screen and (max-width: 768px) {
     .app {
-        margin-left: 80px;
+        margin-left: 0px;
     }
     
 }
 
-/* Media queries */
-@media screen and (min-width: 1920px) {
-    .app {
-        justify-self: center;
-    }
-
-}

@@ -9,7 +9,7 @@
     width: 100%;
     display: flex;
     overflow: hidden;
-    border-radius: 1.5rem;
+    /* border-radius: 1.5rem; */
     position: absolute;
 
 }
@@ -85,4 +85,28 @@
     fill: white;
     width: 3rem;
     height: 3rem;
+}
+
+.slider-btn-left {
+    left: 0;
+    border-radius:1.5rem 0 0 1.5rem ;
+}
+.slider-btn-right {
+    right: 0;
+    border-radius: 0 1.5rem 1.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .slider-img {
+        border-radius: 0;
+    }
+    .slider-wrapper {
+        border-radius: 0;
+    }
+    .slider-overlay {
+        border-radius: 0;
+    }
+    .slider-btn-left, .slider-btn-right {
+        border-radius: 0;
+    }
 }
