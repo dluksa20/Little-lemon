@@ -184,5 +184,9 @@
         height: 100%;
         justify-content: space-evenly;
     }
+    .logo-svg {
+        height: 100%;
+        width: 100%;
+    }
 
 }
