@@ -13,7 +13,7 @@
     --f-text: 'Markazi Text', 'sans-serif';
     --f-bold: 600;
     --f-sm: 1.5rem;
-    --f-md: 2rem;
+    --f-md: 1.5rem;
     --f-lg: 3rem;
     --f-xl: 4rem;
 }
@@ -176,6 +176,13 @@
     }
     .hero-description {
         font-size: var(--f-sm);
+        text-align: justify;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
     }
 
 }
