@@ -13,7 +13,7 @@
     --f-text: 'Markazi Text', 'sans-serif';
     --f-bold: 600;
     --f-sm: 1rem;
-    --f-md: 2rem;
+    --f-md: 1.5rem;
     --f-lg: 3rem;
     --f-xl: 4rem;
 }
@@ -21,7 +21,7 @@
 /* Hero slider */
 .hero-slider {
     height: 100vh;
-    min-height: 700px;
+    min-height: 500px;
 }
 
 .hero-content {
@@ -131,7 +131,7 @@
 @media (max-width: 768px) {
     .hero-slider {
         /* height: calc(100vh - 80px); */
-        min-height: 700px;
+        min-height: 500px;
 
     }
     
