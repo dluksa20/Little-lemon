@@ -30,6 +30,10 @@ const Hero = () => {
                   Experience the vibrant flavors of freshly prepared dishes, inspired by the rich culinary traditions of the Mediterranean.
                 </p>
                 <button className='explore-btn'>Explore the Menu</button>
+                <div className='bottom-btn-group'>
+                  <button className='top-btn'>Order Online</button>
+                  <button className='top-btn'>Book a Table</button>
+              </div>
               </div>
             </div>
         </div>

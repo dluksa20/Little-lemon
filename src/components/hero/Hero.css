@@ -30,12 +30,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 /* Hero top section */
 .logo-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 1rem 1rem;
     border-radius: 1.5rem;
@@ -46,6 +48,7 @@
 .hero-middle {
     display: flex;
     flex-grow: 1;
+    max-width: 70%;
     justify-content: center;
     flex-direction: column;
     text-align: center;
@@ -53,9 +56,22 @@
 
 }
 
+.logo-svg {
+    max-height: 60px;
+    min-height: 50px;
+}
+
 
 
 /* Buttons styling */
+.top-btn-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+}
+.bottom-btn-group {
+    display: none;
+}
 .top-btn, .explore-btn {
     padding: 14px 28px;
     font-size: 1rem;
@@ -75,11 +91,6 @@
     margin-right: 1rem;
 }
 
-.top-btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-}
 
 .top-btn:hover, .explore-btn:hover {
     background: var(--secondary-color-1);
@@ -132,8 +143,33 @@
     .hero-slider {
         height: calc(100vh - 80px);
         min-height: 500px;
-
     }
-    
+
+    .logo-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .top-btn-group {
+        display: none;
+    }
+    .explore-btn {
+        display: none;
+    }
+    .bottom-btn-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .3rem;
+    }
+
+
+    /* text */
+    .hero-title {
+        font-size: var(--f-md);
+    }
+    .hero-description {
+        font-size: var(--f-sm);
+    }
 
 }
