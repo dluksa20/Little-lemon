@@ -24,11 +24,13 @@ const Hero = () => {
               </div>
             </div>
             <div className='hero-middle'>
-              <h1 className='hero-title'>A Taste of Mediterranean Excellence</h1>
-              <p className='hero-description'>
-                Experience the vibrant flavors of freshly prepared dishes, inspired by the rich culinary traditions of the Mediterranean.
-              </p>
-              <button className='explore-btn'>Explore the Menu</button>
+              <div className='hero-text'>
+                <h1 className='hero-title'>A Taste of Mediterranean Excellence</h1>
+                <p className='hero-description'>
+                  Experience the vibrant flavors of freshly prepared dishes, inspired by the rich culinary traditions of the Mediterranean.
+                </p>
+                <button className='explore-btn'>Explore the Menu</button>
+              </div>
             </div>
         </div>
       </ImageSlider>
