@@ -23,7 +23,7 @@
 
 .nav-wrapper {
     z-index: 1;
-    position: relative;
+    position: absolute;
     display: flex;
     height: 100vh;
     width: 100px; 
@@ -73,9 +73,10 @@
 /* Make the sidebar responsive */
 @media (max-width: 768px) {
     .nav-wrapper {
-        width: 80px; /* Adjust the width for smaller screens */
+        /* width: 80px;  */
+        position: relative;
         height: 80px;
-        width: 100vw;
+        width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
     }

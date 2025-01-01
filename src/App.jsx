@@ -6,17 +6,20 @@ import Menu from './pages/Menu';
 import Reservations from './pages/Reservations';
 import Order from './pages/Order';
 import './App.css';
+
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <div className='app'>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/reservations" element={<Reservations />} />
-          <Route path="/order" element={<Order />} />
-        </Routes>
+      <div className="app">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/order" element={<Order />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

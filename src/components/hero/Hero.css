@@ -20,10 +20,9 @@
 
 /* Main container */
 main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: scroll;
+    width: 100%;
+    height: 100%;
+
 }
 
 /* Hero slider */
@@ -34,18 +33,15 @@ main {
 }
 
 .hero-content {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    padding: 50px 50px 0 150px;
+    position: relative;
+
 }
 
 /* Hero top section */
 .hero-top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-evenly;
     padding: 1rem 2rem;
     border-radius: 1.5rem;
     background: rgba(237, 239, 238, 0.6);
@@ -140,7 +136,9 @@ main {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    /* Adjust the hero top section for smaller screens */
+    .hero-slider {
+        height: calc(100vh - 80px);
+    }
     .hero-top {
         flex-direction: column;
         align-items: center;
