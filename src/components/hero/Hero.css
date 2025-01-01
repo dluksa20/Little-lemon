@@ -146,6 +146,9 @@
         height: calc(100vh - 80px);
         min-height: 500px;
     }
+    .hero-content {
+        padding: .5rem;
+    }
 
     .logo-container {
         flex-wrap: wrap;
