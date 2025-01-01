@@ -130,7 +130,7 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .hero-slider {
-        /* height: calc(100vh - 80px); */
+        height: calc(100vh - 80px);
         min-height: 500px;
 
     }
