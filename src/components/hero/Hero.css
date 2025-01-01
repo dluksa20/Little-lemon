@@ -12,8 +12,8 @@
     --f-header: 'Karla', 'sans-serif';
     --f-text: 'Markazi Text', 'sans-serif';
     --f-bold: 600;
-    --f-sm: 1rem;
-    --f-md: 1.5rem;
+    --f-sm: 1.5rem;
+    --f-md: 2rem;
     --f-lg: 3rem;
     --f-xl: 4rem;
 }
@@ -125,6 +125,8 @@
     font-weight: bold;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+
 }
 
 .hero-description {
@@ -167,6 +169,7 @@
     /* text */
     .hero-title {
         font-size: var(--f-md);
+        text-transform: uppercase;
     }
     .hero-description {
         font-size: var(--f-sm);
