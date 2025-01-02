@@ -1,25 +1,29 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';  // Assuming Navbar component is in this path
-import Home from './pages/Home';  // Your pages/components
-import Menu from './pages/Menu';
-import Reservations from './pages/Reservations';
-import Order from './pages/Order';
-import './App.css';
+import React from 'react'
+import Navbar from './components/navbar/Navbar'
+import 'normalize.css';
+import {Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Book from './pages/Book'
+import Menu from './pages/Menu'
+import Order from './pages/Order'
+
+
+
+
 const App = () => {
   return (
-    <Router>
+    <>
       <Navbar />
-      <div className='app'>
+      <div className='page-wrapper'>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/reservations" element={<Reservations />} />
-          <Route path="/order" element={<Order />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/book' element={<Book />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/order' element={<Order />} />
         </Routes>
       </div>
-    </Router>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App
