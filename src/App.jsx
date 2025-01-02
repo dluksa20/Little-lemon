@@ -12,7 +12,7 @@ import Order from './pages/Order'
 
 const App = () => {
   return (
-    <>
+    <div className='app'>
       <Navbar />
       <div className='page-wrapper'>
         <Routes>
@@ -22,7 +22,7 @@ const App = () => {
           <Route path='/order' element={<Order />} />
         </Routes>
       </div>
-    </>
+    </div>
   )
 }
 
