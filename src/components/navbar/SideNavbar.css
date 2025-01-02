@@ -1,0 +1,45 @@
+
+:root {
+  --primary-color-1: #495f54;
+  --primary-color-2: #f4ce14;
+  --secondary-color-1: #EE9972;
+  --secondary-color-2: #FBDABB;
+  --highlight-color-1: #EDEFEE;
+  --highlight-color-2: #333333;
+  --white-color-1: white;
+  --f-header: 'Karla', 'sans-serif';
+  --f-text: 'Markazi Text', 'sans-serif';
+  --f-bold: 600;
+  --spacer-sm: 0.5rem;
+  --spacer-md: 1rem;
+}
+
+.nav-wrapper {
+    height: 100vh;
+    width: fit-content;
+    justify-content: center;
+    display: flex;
+    flex-direction: column
+    overflow: hidden;
+  
+}
+
+.nav-links {
+    margin: var(--spacer-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-md);
+}
+.nav-links a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    gap: var(--spacer-sm);
+    font-family: var(--f-header);
+}
+
+.nav-links svg{
+    font-size: 2rem;
+    color: var(--primary-color-1);
+}

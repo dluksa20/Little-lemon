@@ -1,10 +1,13 @@
 import React from 'react'
-import './Navbar.css'
+import './SideNavbar.css'
 import { GoHome } from 'react-icons/go'
 import { GiKnifeFork } from 'react-icons/gi'
 import { MdOutlineTableRestaurant } from 'react-icons/md'
 import { MdOutlineShoppingCart } from 'react-icons/md'  
 import { NavLink } from 'react-router-dom'
+import { MdOutlineLightMode } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+
 
 const navLinks = [
 {
@@ -35,28 +38,16 @@ const Navbar = () => {
   return (
     <nav className='nav-wrapper'>
         <div className="nav-links">
-            {
-                navLinks.map((link, index) => (
+            {navLinks.map((link, index) => (
                 <NavLink 
-                    key={index} 
-                    to={link.url}>
-                    {({ isActive }) => (
-                    <span className={`nav-item ${isActive ? "active" : ""}`}>
-                        {link.icon} {link.title}
-                    </span>
-                    )}
+                key={index} 
+                to={link.url} 
+                className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
+                >
+                {link.icon} {link.title}
                 </NavLink>
-                ))
-            }
-            </div>
-
-        <div className='mode-toggler'>
-
+            ))}
         </div>
-        <div className='profile-icon'>
-
-        </div>
-
     </nav>
   )
 }
