@@ -15,6 +15,7 @@
     height: calc(100vh - 164px);
     width: 100%;
     min-height: 500px;
+    border-radius: 2rem;
 }
 .home1 {
     background-color: blue;
