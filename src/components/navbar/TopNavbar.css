@@ -48,4 +48,10 @@
     color: var(--primary-color-1);
 }
 
+@media screen and (max-width: 768px){
+  .nav-wrapper-top {
+    margin-left: 0;
+  }
+  
+}
 

@@ -43,3 +43,9 @@
     font-size: 2rem;
     color: var(--primary-color-1);
 }
+@media screen and (max-width: 768px){
+    .nav-wrapper {
+        min-height: 500px;
+    }
+    
+}

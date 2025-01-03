@@ -36,3 +36,10 @@
     min-height: 500px;
 
 }
+
+@media screen and (max-width: 768px){
+    .side-navbar {
+        z-index: 0;
+    }
+    
+}
