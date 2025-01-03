@@ -21,10 +21,10 @@
   width: calc(100% - 2*var(--spacer-lg));
   padding: var(--spacer-md) var(--spacer-lg);
 }
-.nav-logo img{
+/* .nav-logo img{
   height: 4rem;
 
-}
+} */
 
 .nav-links-top {
   display: flex;

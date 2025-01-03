@@ -1,10 +1,16 @@
 import React from 'react'
+import './Home.css'
 
 const Home = () => {
   return (
-    <div className='home'
-    style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-    >Home</div>
+    <div className='home-wrapper'>
+      <div className='home1'>
+        <h1>Home</h1>
+      </div>
+      <div className='home2'>
+        <h1>Home</h1>
+      </div>
+    </div>
   )
 }
 
