@@ -18,13 +18,15 @@
 .nav-wrapper-top {
   display: flex;
   align-items: center;
-  width: calc(100% - 2*var(--spacer-lg));
-  padding: var(--spacer-md) var(--spacer-lg);
+  height: 100px;
+  width: 100%;
+  /* width: calc(100% - 100px); */
+  padding: 0 var(--spacer-lg);
+  margin-left: 100px;
 }
-/* .nav-logo img{
-  height: 4rem;
-
-} */
+.nav-logo img {
+  height: 100px;
+}
 
 .nav-links-top {
   display: flex;
