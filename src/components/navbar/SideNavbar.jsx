@@ -36,7 +36,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className='nav-wrapper'>
+    <div className='aside-wrapper'>
         <div className="nav-links">
             {navLinks.map((link, index) => (
                 <NavLink 
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </NavLink>
             ))}
         </div>
-    </nav>
+    </div>
   )
 }
 

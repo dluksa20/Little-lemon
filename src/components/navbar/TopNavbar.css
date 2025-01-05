@@ -1,57 +1,36 @@
-:root {
-    --primary-color-1: #495f54;
-    --primary-color-2: #f4ce14;
-    --secondary-color-1: #EE9972;
-    --secondary-color-2: #FBDABB;
-    --highlight-color-1: #EDEFEE;
-    --highlight-color-2: #333333;
-    --white-color-1: white;
-    --f-header: 'Karla', 'sans-serif';
-    --f-text: 'Markazi Text', 'sans-serif';
-    --f-bold: 600;
-    --spacer-sm: 0.5rem;
-    --spacer-md: 1rem;
-    --spacer-lg: 2rem;
-  }
 
-
-.nav-wrapper-top {
+/* navbar */
+.navbar-top {
   display: flex;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  /* width: calc(100% - 100px); */
-  padding: 0 var(--spacer-lg);
-  margin-left: 100px;
+  gap: .5rem;
+  height: 100%;
+  width: 100vw;
+  padding: 0 2rem 0 1rem;
+}
+
+/* navbar logo */
+.nav-logo {
+  height: 100%;
 }
 .nav-logo img {
-  height: 100px;
+  height: 100%;
 }
 
-.nav-links-top {
+/* navbar icons */
+.nav-icons-top {
   display: flex;
-  gap: var(--spacer-md);
+  gap: 1.5rem;
   margin-left: auto;
 }
-
-.nav-links-top a{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-decoration: none;
-    gap: var(--spacer-sm);
-    font-family: var(--f-header);
+.mode-toggler, .profile-icon a{
+  display: block;
+  height: 100%;
 }
 
-.nav-links-top svg{
-    font-size: 2rem;
-    color: var(--primary-color-1);
+.nav-icons-top svg{
+  height: 100%;
+  width: 25px;
+  color: var(--primary-color-1);
 }
 
-@media screen and (max-width: 768px){
-  .nav-wrapper-top {
-    margin-left: 0;
-  }
-  
-}
 

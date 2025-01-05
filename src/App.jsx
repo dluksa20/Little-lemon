@@ -15,14 +15,14 @@ import TopNavbar from './components/navbar/TopNavbar';
 
 const App = () => {
   return (
-    <div className='app'>
-      <div className='side-navbar'>
-        <SideNavbar />
-      </div>
-      <div className='top-navbar'>
-        <TopNavbar />
-      </div>
-      <div className='page-wrapper'>
+    <>
+      <nav>
+        <TopNavbar/>
+      </nav>
+      <aside>
+        <SideNavbar/>
+      </aside>  
+      <main>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/book' element={<Book />} />
@@ -30,9 +30,31 @@ const App = () => {
           <Route path='/order' element={<Order />} />
           <Route path='/profile' element={<Profile />} />
         </Routes>
-      </div>
-    </div>
+      </main>  
+      <footer>footer</footer>
+    </>
   )
 }
 
 export default App
+
+
+
+
+{/* <div className='app'>
+<div className='side-navbar'>
+  <SideNavbar />
+</div>
+<div className='top-navbar'>
+  <TopNavbar />
+</div>
+<div className='page-wrapper'>
+  <Routes>
+    <Route path='/' element={<Home />} />
+    <Route path='/book' element={<Book />} />
+    <Route path='/menu' element={<Menu />} />
+    <Route path='/order' element={<Order />} />
+    <Route path='/profile' element={<Profile />} />
+  </Routes>
+</div>
+</div> */}

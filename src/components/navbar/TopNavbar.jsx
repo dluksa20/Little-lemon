@@ -7,11 +7,11 @@ import logo from '../../assets/images/logos/Logo.svg'
 
 const TopNavbar = () => {
   return (
-        <nav className='nav-wrapper-top'>
+        <div className='navbar-top'>
             <div className='nav-logo'>
                 <img src={logo} alt="" />
             </div>
-            <div className='nav-links-top'>
+            <div className='nav-icons-top'>
                 <div className='mode-toggler'>
                     <MdOutlineLightMode />
                 </div>
@@ -24,7 +24,7 @@ const TopNavbar = () => {
                     </NavLink>
                 </div>
             </div>
-        </nav>
+        </div>
   )
 }
 
