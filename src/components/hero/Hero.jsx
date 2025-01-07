@@ -4,6 +4,7 @@ import slide1 from '../../assets/images/slides/slide1.jpg'
 import slide2 from '../../assets/images/slides/slide2.jpg'
 import slide3 from '../../assets/images/slides/slide3.jpg'
 import slide4 from '../../assets/images/slides/slide4.jpg'
+import { MdPadding } from 'react-icons/md'
 
 const slides = [
   {
@@ -32,7 +33,7 @@ const Hero = () => {
   return (
     <div className='hero-wrapper'>
         {/* <img src={slide1} alt="" /> */}
-        <ImageSlider slides={slides}>
+        <ImageSlider className='slider' slides={slides}>
 
         </ImageSlider>
     </div>

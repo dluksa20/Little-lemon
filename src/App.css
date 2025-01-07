@@ -6,32 +6,33 @@
 }
 
 body {
-  /* height: 100vh; */
-  /* display: block; */
+  min-height: 100vh;
+  display: block;
 }
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 100px 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "nav nav"
     "aside main"
     "aside footer";
-  align-items: center;
-  justify-content: center;
 }
 
 aside {
   grid-area: aside;
-  height: calc(100vh - 100px);
+  height: 100vh;
   position: sticky;
   align-self: start;
-  top: 40vh; /* Stick at the middle of the viewport */
-  /* transform: translateY(50vh);  */
+  top: 0;
+  bottom: 0;
+  
 }
 main {
   grid-area: main;
+  /* padding: 2rem; */
+
 }
 nav {
   grid-area: nav;
@@ -44,7 +45,5 @@ nav {
 footer {
   grid-area: footer;
   background-color: aqua;
-  height: 150px;
-  position: relative;
-  bottom: 0;
+  height: 100px;
 }

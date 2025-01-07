@@ -1,4 +1,8 @@
 .hero-wrapper {
     width: 100%;
-    height: calc(100vh - 164px);
+    height:100%;
+    padding: 2rem;
+}
+.slider {
+    padding: 2rem;
 }

@@ -9,6 +9,7 @@ import Menu from './pages/Menu'
 import Order from './pages/Order'
 import Profile from './pages/Profile'
 import TopNavbar from './components/navbar/TopNavbar';
+import MenuBlob from './components/navbar/Menu';
 
 
 

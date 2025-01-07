@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ImageSlider.css';
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, className, styles}) => {
   const [current, setCurrent] = useState(1);
 
   const length = slides.length;
@@ -15,12 +15,12 @@ const ImageSlider = ({ slides }) => {
   };
 
   return (
-    <div className="slider-wrapper">
+    <div className={`slider-wrapper ${className}`} style={{...styles}}>
       {slides.map((slide, index) => (
         <div
           key={index}
         >
-          {index === current && <img className='img' src={slide.image} alt={`Slide ${index + 1}`} />}
+          {index === current && <img className='img'  src={slide.image} alt={`Slide ${index + 1}`} />}
         </div>
       ))}
     </div>
