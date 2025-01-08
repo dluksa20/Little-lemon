@@ -46,11 +46,11 @@ const Navbar = () => {
                     to={link.url} 
                     className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
                 >
-                    {link.icon} {link.title}
+                    {link.icon} {isOpen ? link.title: ''}
                 </NavLink>
             ))}
         </div>
-        <button className='expand-aside-btn' onClick={toggleSidebar}>
+        <button className='expand-aside-btn' onMouseEnter={toggleSidebar}>
             <FaChevronRight/>
         </button>
     </div>

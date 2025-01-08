@@ -6,6 +6,7 @@
     align-items: center;
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 
 .aside-wrapper.expand {
@@ -20,12 +21,13 @@
 }
 .nav-links a {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    gap: .3rem;
+    gap: 1rem;
     color: #495e74;
     text-decoration: none;
 }
+
 
 
 .nav-links svg{
@@ -33,7 +35,11 @@
     color: var(--primary-color-1);
 }
 
-/* .nav-links.nav-links-expanded {
-    color: #495e74;
-    gap: 3rem;
-} */
+.expand-aside-btn{
+    all:unset;
+    position: absolute;
+    right: 0;
+    padding-right: .3rem;
+    font-size: 1.5rem;
+
+} 
