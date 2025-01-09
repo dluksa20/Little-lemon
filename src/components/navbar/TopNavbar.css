@@ -2,9 +2,10 @@
 /* navbar */
 .navbar-top {
   display: flex;
+  justify-content: center;
   gap: .5rem;
   height: 100%;
-  width: 100%;
+  width: 80%;
   padding: 0 2rem 0 1rem;
 }
 

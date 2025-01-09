@@ -12,35 +12,38 @@ body {
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 120px 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    "nav nav"
+    "aside nav"
     "aside main"
     "aside footer";
 }
 
 aside {
   grid-area: aside;
-  height: 100vh;
+  height: calc(100vh- 100px);
+  /* height: 100vh; */
   position: sticky;
   align-self: start;
-  top: 0;
+  top: 100px;
   bottom: 0;
   
 }
 main {
   grid-area: main;
-  /* padding: 2rem; */
-
+  min-height: 100vh;
 }
 nav {
+  display: flex;
+  justify-content: center;
   grid-area: nav;
-  height: 100px;
+  height: 140px;
   position: sticky;
   background-color: white;
   top: 0;
   z-index: 1;
+
 }
 footer {
   grid-area: footer;

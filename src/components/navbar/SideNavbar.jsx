@@ -4,8 +4,12 @@ import { GoHome } from 'react-icons/go';
 import { GiKnifeFork } from 'react-icons/gi';
 import { MdOutlineTableRestaurant } from 'react-icons/md';
 import { MdOutlineShoppingCart } from 'react-icons/md';  
-import { NavLink } from 'react-router-dom';
-import { FaChevronRight } from "react-icons/fa6";
+import { Link, NavLink } from 'react-router-dom';
+import { FaInstagram } from 'react-icons/fa';
+import { AiOutlineFacebook } from 'react-icons/ai';
+import { FiTwitter } from 'react-icons/fi';
+import { CgProfile } from 'react-icons/cg';
+
 
 const navLinks = [
     {
@@ -31,28 +35,36 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(null)
 
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen)
+    const expandSidebar = () => {
+        setIsOpen(true)
+    }
+    const colapseSidebar = () => {
+        setIsOpen(false)
     }
 
   return (
-    <div className={`aside-wrapper ${isOpen  ? "expand" : "colapse"}`}>
+    <div className={`aside-wrapper ${isOpen  ? "expand" : "colapse"}`} onMouseEnter={expandSidebar} onMouseLeave={colapseSidebar}>
         <div className={`nav-links ${isOpen  ? "nav-links-expanded" : ""}`}>
-            {navLinks.map((link, index) => (
-                <NavLink 
-                    key={index} 
-                    to={link.url} 
-                    className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}
-                >
-                    {link.icon} {isOpen ? link.title: ''}
-                </NavLink>
-            ))}
+            <div className='navigation-icons'>
+                {navLinks.map((link, index) => (
+                    <NavLink 
+                        key={index} 
+                        to={link.url} 
+                        className={({ isActive }) => `nav-item-aside ${isActive ? "active" : ""}`}
+                    >
+                        {link.icon } {isOpen ? link.title: ''}
+                    </NavLink>
+                ))}
+            </div>
+            <div className='social-icons'>
+                <FiTwitter />
+                <AiOutlineFacebook />
+                <FaInstagram />
+            </div>
         </div>
-        <button className='expand-aside-btn' onMouseEnter={toggleSidebar}>
-            <FaChevronRight/>
-        </button>
+
     </div>
   );
 };

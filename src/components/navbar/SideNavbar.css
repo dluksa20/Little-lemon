@@ -1,45 +1,112 @@
 
+:root {
+    --primary-color-1: #495E57;
+    --secondary-color-1: #EE9972;
+    --secondary-color-2: #FBDABB;
+    --highlight-color-2: #333333;
+}
 
 .aside-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100%;
     position: relative;
+
 }
 
 .aside-wrapper.expand {
-    width: 300px;
-    background-color: white;
+    width: 200px;
+    background-color:white;
+    transition: width 0.5s ease-in-out;
 }
+.aside-wrapper.colapse {
+    transition: width 0.3s ease-in-out;
+
+}
+
+
+.aside-wrapper.colapse .social-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+
+}
+.social-icons {
+    display: flex;
+    gap: 2rem;
+
+}
+.social-icons svg {
+    font-size: 1.5rem;
+    color: var(--highlight-color-2);
+
+}
+
+.profile-icon svg {
+    font-size: 1.5rem;
+    color: var(--highlight-color-2);
+
+}
+
+.profile-icon-actions .link {
+    text-decoration: underline;
+    text-underline-offset: .25rem;
+}
+
 .nav-links {
+    height: calc(100vh - 100px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:space-between;
     gap: 2rem;
+    padding: 4rem 0;
+
 }
-.nav-links a {
+
+.navigation-icons {
     display: flex;
-    /* flex-direction: column; */
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+
+
+}
+.navigation-icons a {
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
-    color: #495e74;
+    color: var(--highlight-color-2);
     text-decoration: none;
+
+}
+.nav-item-aside {
+    width: 80%;
+    height: 80px;
+    align-self: center;
+    transition: all .2s ease-in-out;
+    border-radius: 1rem;
+}
+.nav-item-aside:hover {
+    background-color: var(--secondary-color-2);
+}
+.nav-item-aside.active {
+    border: solid  4px var(--secondary-color-1);
+    background: linear-gradient(to right, var(--secondary-color-2), transparent);
+
+     
 }
 
-
-
-.nav-links svg{
+.navigation-icons svg{
     font-size: 2rem;
-    color: var(--primary-color-1);
+    color: var(--highlight-color-2);
+
+
 }
 
-.expand-aside-btn{
-    all:unset;
-    position: absolute;
-    right: 0;
-    padding-right: .3rem;
-    font-size: 1.5rem;
 
-} 

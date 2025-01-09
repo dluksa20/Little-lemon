@@ -33,7 +33,7 @@ const Hero = () => {
   return (
     <div className='hero-wrapper'>
         {/* <img src={slide1} alt="" /> */}
-        <ImageSlider className='slider' slides={slides}>
+        <ImageSlider className='slider' slides={slides} styles={{padding:'0rem 3rem 2rem 1rem'}}>
 
         </ImageSlider>
     </div>
