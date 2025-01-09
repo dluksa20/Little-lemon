@@ -11,7 +11,7 @@ const TopNavbar = () => {
             <div className='nav-logo'>
                 <img src={logo} alt="" />
             </div>
-            <div className='nav-icons-top'>
+            {/* <div className='nav-icons-top'>
                 <div className='mode-toggler'>
                     <MdOutlineLightMode />
                 </div>
@@ -23,7 +23,7 @@ const TopNavbar = () => {
                         <CgProfile />
                     </NavLink>
                 </div>
-            </div>
+            </div> */}
         </div>
   )
 }
