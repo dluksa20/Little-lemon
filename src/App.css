@@ -23,11 +23,12 @@ body {
 aside {
   grid-area: aside;
   height: 100vh;
-  min-height: 300px;
+  min-height: 500px;
   position: sticky;
   align-self: start;
   top: 0;
   bottom: 0;
+
   
 }
 main {

@@ -6,9 +6,9 @@ import { MdOutlineTableRestaurant, MdOutlineShoppingCart, MdOutlineLightMode } f
 import { NavLink } from 'react-router-dom';
 import { FaInstagram } from 'react-icons/fa';
 import { AiOutlineFacebook } from 'react-icons/ai';
-import { FiTwitter } from 'react-icons/fi';
+import { FiChevronsLeft, FiTwitter } from 'react-icons/fi';
 import { CgProfile } from 'react-icons/cg';
-import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
+import { FiChevronsRight, FiChevronLeft } from "react-icons/fi";
 
 // Navigation links data
 const navLinks = [
@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <div className={`aside-wrapper ${isOpen ? "expand" : "collapse"}`}>
       {/* Sidebar Links */}
-      <div className={`nav-links ${isOpen ? "nav-links-expanded" : ""}`}>
+      <div className='nav-links'>
         {/* Profile and Mode Toggle */}
         <div className="profile-icon">
           <NavLink className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`} to="/profile">
@@ -50,19 +50,24 @@ const Navbar = () => {
             </NavLink>
           ))}
         </div>
-
-        {/* Social Media Icons */}
-        <div className="social-icons">
-          <FiTwitter />
-          <AiOutlineFacebook />
-          <FaInstagram />
+        <div className='aside-bottom'>
+            {/* Social Media Icons */}
+            <div className={`social-icons ${isOpen ? 'expand': ''}`}>
+            {isOpen && <p className="follow-text">Follow Us</p>}
+            <FiTwitter />
+            <AiOutlineFacebook />
+            <FaInstagram />
+            </div>
+            {/* Sidebar Toggle Button */}
+            <button 
+            className={`sidebar-btn ${isOpen ? "active" : ""}`}
+            onClick={toggleSidebar}>
+                {isOpen ? <FiChevronsLeft /> : <FiChevronsRight />}
+            </button>
         </div>
-      </div>
 
-      {/* Sidebar Toggle Button */}
-      <button className="sidebar-btn" onClick={toggleSidebar}>
-        {isOpen ? <FaChevronCircleLeft /> : <FaChevronCircleRight />}
-      </button>
+
+      </div>
     </div>
   );
 };
