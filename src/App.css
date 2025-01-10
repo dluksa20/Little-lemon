@@ -23,7 +23,6 @@ body {
 aside {
   grid-area: aside;
   height: 100vh;
-  min-height: 500px;
   position: sticky;
   align-self: start;
   top: 0;

@@ -29,13 +29,14 @@ const Navbar = () => {
       {/* Sidebar Links */}
       <div className='nav-links'>
         {/* Profile and Mode Toggle */}
-        <div className="profile-icon">
-          <NavLink className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`} to="/profile">
+        <div className="aside-top">
+          <NavLink className='profile' to="/profile">
             <CgProfile />
           </NavLink>
-          <div className="mode-toggler">
-            <MdOutlineLightMode />
-          </div>
+          {isOpen && <div className='profile-btn'>
+            <button>Log in</button>
+            <button>Sign Up</button>
+            </div>}
         </div>
 
         {/* Navigation Icons */}
