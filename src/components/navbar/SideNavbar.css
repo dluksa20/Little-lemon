@@ -19,6 +19,7 @@
     position: relative;
     background-color: white;
     padding-top: 2rem;
+    transition: all .3s ease-in-out;
 }
 
 .nav-links {
@@ -33,6 +34,7 @@
 .aside-wrapper.expand {
     width: 200px;
     box-shadow: 0 0px 10px rgba(0, 0, 0, .4);
+    transition: width .5s ease-in-out;
 }
 
 
@@ -224,15 +226,29 @@
     background: radial-gradient(circle, var(--secondary-color-1), var(--secondary-color-2));
 }
 
-@media screen and (max-height: 540px) {
+@media screen and (max-height: 640px) {
     .nav-links{
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
     .aside-top {
         min-height: auto;
     }
+    .profile {
+        font-size: 1.2rem;
+    }
+    .navigation-icons {
+        gap: 0;
+    }
+    .navigation-icons svg {
+        font-size: 1.2rem;
+    }
     .aside-bottom {
-        display: none;
+        gap: 0;
+    }
+    .social-icons {
+        flex-direction: row;
+        align-items: end;
+        min-height: auto;
     }
 }

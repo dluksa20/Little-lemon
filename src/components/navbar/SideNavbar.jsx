@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SideNavbar.css';
 import { GoHome } from 'react-icons/go';
 import { GiKnifeFork } from 'react-icons/gi';
@@ -23,6 +23,18 @@ const Navbar = () => {
 
   // Toggles sidebar state
   const toggleSidebar = () => setIsOpen(!isOpen);
+
+
+  const handleResize=()=>{
+    const screenHeight = window.innerHeight;
+    if (screenHeight < 500){
+        setIsOpen(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className={`aside-wrapper ${isOpen ? "expand" : "collapse"}`}>
