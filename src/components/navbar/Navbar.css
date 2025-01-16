@@ -1,0 +1,137 @@
+:root {
+  /* colors */
+  --primary-color-1: #495E57;
+  --primary-color-2: #F4CE14;
+  --secondary-color-1: #EE9972;
+  --secondary-color-2: #FBDABB;
+  --highlight-color-1: #EDEFEE;
+  --highlight-color-2: #333333;
+
+    /* fonts */
+  --font-text: 'Karla', sans-serif;
+  --font-header: 'Markazi Text', serif;
+
+  /* font sizes */
+  --fs-sm: 1rem;
+  --fs-md: 1.5rem;
+  --fs-lg: 2rem;
+}
+
+
+
+
+/* Navbar wrapper */
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1rem;
+  background-color: var(--primary-color-2);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .3);
+  border: solid 1px var(--primary-color-1);
+}
+.navbar-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 100%;
+  position: relative;
+  left: 0%;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  --mask: radial-gradient(8.0px at 12px 12px,#0000 100%,#000) -12px -12px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  z-index: 0;
+}
+.navbar-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--primary-color-1);
+  --mask:
+    radial-gradient(10px at 10px 10px,#0000 calc(98% - 2px),#000 calc(100% - 2px) 98%,#0000) -10px -10px,
+    linear-gradient(90deg,#000 4px,#0000 0) -2px 50% /100% calc(100% - 20px + 2px) repeat-x,
+    linear-gradient(      #000 4px,#0000 0) 50% -2px/calc(100% - 20px + 2px) 100% repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  z-index:-1;
+}
+
+
+/* navbar logo */
+.navbar-logo {
+  height: 100%;
+}
+
+
+
+/* Navbar links */
+.navbar-links-wrapper {
+  flex-basis: 100%;
+  padding: 8px 0;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+  width: 50px; /* Default: icon only */
+}
+.navbar-link:hover {
+  width: 150px; /* Expanded: icon + text */
+  background-color: #555;
+}
+
+
+/* navbar icons */
+.navbar-icons-wrapper {
+  flex-basis: 100%;
+  padding: 8px 0;
+
+}
+.icon-wrapper {
+  font-size: 24px;
+}
+.link-title {
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+}
+.navbar-link:hover .link-title {
+  opacity: 1;
+}
+.navbar-border {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-lg);
+  color: var(--primary-color-1);
+  height: 100%;
+  gap: 3rem;
+  padding-right: 1rem;
+}
+
+

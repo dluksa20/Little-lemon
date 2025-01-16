@@ -12,24 +12,15 @@ body {
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    "aside nav"
-    "aside main"
-    "aside footer";
+    "nav nav"
+    "main main"
+    "footer footer";
 }
 
-aside {
-  grid-area: aside;
-  height: 100vh;
-  position: sticky;
-  align-self: start;
-  top: 0;
-  bottom: 0;
 
-  
-}
 main {
   grid-area: main;
 
@@ -37,12 +28,10 @@ main {
 nav {
   display: flex;
   justify-content: center;
-  grid-area: nav;
-  height: 100px;
-  position: sticky;
-  background-color: white;
-  top: 0;
-  z-index: 0;
+  position: fixed;
+  width: 100%;
+  top:0;
+  z-index: 3;
 
 }
 footer {

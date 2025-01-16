@@ -23,6 +23,9 @@ const ImageSlider = ({ slides, className, styles}) => {
           {index === current && <img className='img'  src={slide.image} alt={`Slide ${index + 1}`} />}
         </div>
       ))}
+      <div className='slider-content'>
+
+      </div>
     </div>
   );
 };
