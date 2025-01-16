@@ -8,6 +8,7 @@
 body {
   min-height: 100vh;
   display: block;
+  background-color: antiquewhite;
 }
 #root {
   min-height: 100vh;
@@ -25,13 +26,12 @@ main {
   grid-area: main;
 
 }
-nav {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  top:0;
-  z-index: 3;
+nav { 
+  position: sticky;
+  /* top: 20px; */
+  width: auto;
+  padding: 1rem;
+  z-index: 1;
 
 }
 footer {

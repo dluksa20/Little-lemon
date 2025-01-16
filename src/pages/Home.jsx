@@ -1,6 +1,5 @@
 import React from 'react'
 import './Home.css'
-import ImageSlider from '../components/hero/ImageSlider'
 import Hero from '../components/hero/Hero'
 
 const Home = () => {
