@@ -208,6 +208,10 @@
 
   .navbar-logo span {
     /* display: none; */
+    font-size: var(--fs-sm);
+  }
+  .navbar-logo img {
+    height: 40px;
   }
 
   .navbar-icons-wrapper {
