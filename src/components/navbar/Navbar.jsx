@@ -53,13 +53,13 @@ const TopNavbar = () => {
       </div>
       <div className="navbar-icons-hamburger">
         <button className='hamburger-btn' onClick={() => setDropdownOpen(!dropdownOpen)}>
-          {dropdownOpen ? <RiCloseFill  className='close-bt'/>: <RiMenu3Fill />}
+          {dropdownOpen ? <RiCloseFill  className='close-btn'/>: <RiMenu3Fill />}
         </button>
         <div className={`dropdown-list ${dropdownOpen ? 'show' : ''}`}>
           <div className='profile-section'>
             <CgProfile />
-            <button>Log in</button>
-            <button>Sign Up</button>
+            <button className='login-btn'>Log in</button>
+            <button className='signup-btn'>Sign Up</button>
           </div>
           <div className="dropdown-items">
             {navLinks.map(({ title, icon, url }, index) => (
