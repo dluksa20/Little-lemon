@@ -295,7 +295,8 @@
   background-color: var(--highlight-color-1);
   transition: background-color 0.3s ease, color 0.3s ease;
   border: solid 1.5px var(--highlight-color-1);
-  background-color: #495e575a;
+  /* background-color: #495e575a; */
+  background-color: var(--primary-color-2);
   border-radius: var(--br-sm);
 
 }
@@ -303,7 +304,7 @@
 .dropdown-items a:hover {
   background-color: var(--primary-color-1);
   color: var(--highlight-color-1);
-  border: inset  1.5px var(--highlight-color-2);
+  /* border: outset  1.5px var(--highlight-color-2); */
   transition: all .2s ease;
   
 }
@@ -358,7 +359,7 @@
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
 
   .navbar-wrapper{
     padding: var(--pd-sm);
