@@ -1,3 +1,50 @@
+:root {
+  /* colors */
+  --primary-color-1: #495E57;
+  --primary-color-2: #F4CE14;
+  --secondary-color-1: #EE9972;
+  --secondary-color-2: #FBDABB;
+  --highlight-color-1: #EDEFEE;
+  --highlight-color-2: #333333;
+  --white: white;
+
+  /* gradients */
+  --gradient-primary: linear-gradient(135deg, rgba(73, 94, 87, 0.6), rgba(244, 206, 20, 0.6));
+  /* fonts */
+  --font-text: 'Karla', sans-serif;
+  --font-header: 'Markazi Text', serif;
+
+  /* font sizes */
+  --fs-sm: 1rem;
+  --fs-md: 1.2rem;
+  --fs-lg: 2rem;
+
+  /* padding */
+  --pd-xxs: 0.1rem;
+  --pd-xs: 0.25rem;
+  --pd-sm: 0.5rem;
+  --pd-md: 0.75rem;
+  --pd-lg: 1rem;
+  --pd-xl: 1.5rem;
+
+  /* border radius */
+  --br-sm: .5rem;
+  --br-md: 1rem;
+
+  /* spacing */
+  --sp-xs: .5rem;
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 3rem;
+
+  /* box shadows */
+  --shadow-main: 0px 10px 12px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
 /* Reset margins and padding for all elements */
 * {
   margin: 0;
@@ -8,7 +55,7 @@
 body {
   min-height: 100vh;
   display: block;
-  background-color: antiquewhite;
+  background-color: var(--primary-color-1);
 }
 #root {
   min-height: 100vh;

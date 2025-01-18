@@ -1,11 +1,11 @@
 .hero-wrapper  {
-    height: calc(100vh - 197.06px);
+    height: calc(100vh - 181.06px);
     min-height: calc(100vw / 2);
     width: 100%;
     aspect-ratio: 1/1;
     /* border: solid; */
-    border-radius: 2rem;
     padding: 1rem;
+    background-color: aliceblue;
 
 }
 .hero-wrapper img {
