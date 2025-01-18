@@ -16,7 +16,7 @@
 
   /* font sizes */
   --fs-sm: 1rem;
-  --fs-md: 1.5rem;
+  --fs-md: 1.2rem;
   --fs-lg: 2rem;
 
   /* padding */
@@ -79,7 +79,7 @@
   color: var(--primary-color-1);
   text-decoration: none;
   border-radius: var(--br-sm);
-  border: solid 2px var(--primary-color-1);
+  border: solid 1.5px var(--primary-color-1);
 
 }
 
@@ -91,23 +91,27 @@
   display: flex;
   justify-content: center;
   width: fit-content; 
-  color: var(--highlight-color-1);
-  background: var(--primary-color-1);
-  border: inset  2px var(--highlight-color-2);
+  background: var(--primary-color-2);
+  border: solid  1.5px var(--highlight-color-2);
+  transform: translateY(-3px);
   transition: all 0.3s ease-in;
 
 }
 
-.navbar-links .nav-item:hover svg {
-  transform: scale(1.2); 
-  color: var(--highlight-color-1);
+.navbar-links .nav-item:hover span {
+  transform: scale(1.1); 
+  transform-origin: center;
   transition: all 0.3s ease-in;
   
 }
 .navbar-links .nav-item.active {
-  background: var(--primary-color-1); 
-  color: var(--highlight-color-1); 
-  border: inset  2px black;
+  background: var(--primary-color-2); 
+  color: var(--primary-color-1); 
+  border: solid  1.5px var(--primary-color-1);
+  transform: translateY(-3px);
+
+  transition: color 0.2s ease-in-out;
+
 }
 
 .nav-title {
@@ -115,7 +119,6 @@
   font-family: var(--font-header);
   font-size: var(--fs-md);
   text-transform: uppercase;
-  transition: all 0.5s ease-in-out;
 
 }
 
@@ -299,7 +302,7 @@
   color: var(--primary-color-1);
   text-decoration: none;
   font-family: var(--font-header);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   text-transform: uppercase;
   border: 1.3px solid var(--primary-color-1);
   border-radius: var(--br-sm);
@@ -323,10 +326,6 @@
   transform: scale(1.2);
   transform-origin: center;
 }
-
-
-
-
 
 
 /* media queries */
@@ -360,6 +359,13 @@
   .nav-item svg {
     font-size: var(--fs-md);
   }
+  .navbar-links .nav-item.hovered {
+    transform: translateY(-1px);
+  }
+  .navbar-links .nav-item.active {
+    transform: translateY(-1px);
+  }
+
 }
 
 @media screen and (max-width: 600px) {
