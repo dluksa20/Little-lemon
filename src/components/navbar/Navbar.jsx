@@ -3,10 +3,11 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import Logo from '../../assets/images/logos/Logo.svg';
+import Logo from '../../assets/images/logos/logo.png';
 import { GoHome } from 'react-icons/go';
 import { GiKnifeFork } from 'react-icons/gi';
 import { MdOutlineTableRestaurant, MdOutlineShoppingCart } from 'react-icons/md';
+import { RiMenu3Fill } from "react-icons/ri";
 
 const navLinks = [
   { title: 'Home', icon: <GoHome />, url: '/' },
@@ -21,7 +22,7 @@ const TopNavbar = () => {
   return (
     <div className='navbar-wrapper'>
       <div className='navbar-logo'>
-        <Logo />
+        <img src={Logo} alt="" />
         <span>Little Lemon</span>
       </div>
 
@@ -46,6 +47,9 @@ const TopNavbar = () => {
       <div className='navbar-icons-wrapper'>
         <MdOutlineLightMode />
         <CgProfile />
+      </div>
+      <div className='navbar-icons-hamburger'>
+        <RiMenu3Fill />
       </div>
     </div>
   );

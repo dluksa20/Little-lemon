@@ -6,6 +6,7 @@
   --secondary-color-2: #FBDABB;
   --highlight-color-1: #EDEFEE;
   --highlight-color-2: #333333;
+  --white: white;
 
   /* gradients */
   --gradient-primary: linear-gradient(135deg, rgba(73, 94, 87, 0.6), rgba(244, 206, 20, 0.6));
@@ -19,6 +20,7 @@
   --fs-lg: 2rem;
 
   /* padding */
+  --pd-xxs: 0.rem;
   --pd-xs: 0.25rem;
   --pd-sm: 0.5rem;
   --pd-md: 0.75rem;
@@ -45,14 +47,10 @@
   gap: var(--sp-lg);
   justify-content: space-between;
   align-items: center;
-  background: var(--gradient-primary);
+  background: var(--primary-color-1);
   padding: var(--pd-sm);
   box-shadow: var(--shadow-main);
-  border-radius: var(--br-sm);
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
-  transition: all 0.3s ease-in-out;
-  border: solid 1px;
+  border-bottom: 1px solid var(--primary-color-1);
 }
 
 /* Navbar links container */
@@ -60,12 +58,13 @@
   display: flex;
   justify-content: center;
   flex-basis: 100%;
+  width: fit-content;
   gap: var(--sp-sm);
   padding: var(--pd-sm);
   box-shadow: var(--shadow-hover);
   border-radius: var(--br-sm);
-  background-color: var(--primary-color-2);
-  border: solid 1px var(--primary-color-1);
+  background-color: var(--highlight-color-1);
+  border: double 4px var(--primary-color-1);
 
 
 }
@@ -73,10 +72,10 @@
   display: flex;
   align-items: center;
   padding: var(--pd-sm);
-  color: var(--highlight-color-2);
+  color: var(--primary-color-1);
   text-decoration: none;
   border-radius: var(--br-sm);
-  border: solid 1px ;
+  border: solid 2px var(--primary-color-1);
 
 }
 
@@ -91,19 +90,23 @@
   width: fit-content; 
   color: var(--highlight-color-1);
   background: var(--primary-color-1);
-  border: solid 1px;
+  border: inset  2px var(--highlight-color-2);
+  transition: all 0.3s ease-in;
+
 }
 
 .navbar-links .nav-item:hover svg {
   transform: scale(1.2); 
   color: var(--highlight-color-1);
-  transition: all 0.3s ease-in-out;
-
-
+  transition: all 0.3s ease-in;
+  
 }
 .navbar-links .nav-item.active {
   background: var(--primary-color-1); 
   color: var(--highlight-color-1); 
+  border: inset  2px black;
+
+  /* border: double  4px var(--white); */
 }
 
 .nav-title {
@@ -119,28 +122,27 @@
 .navbar-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-wrap: nowrap;
   cursor: pointer;
+  width: fit-content;
   gap: var(--sp-sm);
-  font-size: var(--fs-sm);
-  color: var(--highlight-color-1);
   text-transform: uppercase;
   font-family: var(--font-header);
-  transition: all 0.3s ease-in-out; 
-  border: 4px double var(--primary-color-2); 
-  padding: var(--pd-xs); 
+  border: 4px double var(--primary-color-1); 
+  padding: var(--pd-sm); 
   border-radius: var(--br-sm); 
+  background-color: var(--white);
+}
+.navbar-logo img {
+  height: 56.4px;
 }
 .navbar-logo span {
-  font-size: var(--fs-md); 
+  font-size: var(--fs-lg); 
   font-weight: bold; 
   letter-spacing: 2px; 
-  color: var(--highlight-color-1); 
   text-transform: uppercase; 
-  color: var(--highlight-color-1);
-  /* text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), 
-               -2px -2px 6px rgba(0, 0, 0, 0.3), 
-               1px 1px 0 rgba(255, 255, 255, 0.5); */
+  color: var(--primary-color-1);
 }
 
 
@@ -154,7 +156,7 @@
 
 .navbar-icons-wrapper svg {
   font-size: 20px;
-  color: var(--highlight-color-2);
+  color: var(--white);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -164,24 +166,60 @@
   transform: scale(1.2); 
 }
 
-@media screen and (max-width: 900px) {
+.navbar-icons-hamburger {
+  display: none;
+  font-size: var(--fs-lg);
+  color: var(--white);
+}
+
+@media screen and (max-width: 990px) {
+
+  /* navbar wrapper */
   .navbar-wrapper {
     gap: var(--sp-sm);
   }
   .nav-title {
     display: none;
   }
+
+
+  /* navbar logo */
+  .navbar-logo{
+    padding: var(--pd-xs);
+  }
   .navbar-logo span {
-    display: none;
+    /* display: none; */
+    font-size: var(--fs-md);
   }
-  .navbar-logo svg {
-    height: 43px;
-    width: 25px;
+  .navbar-logo img {
+    height: 48.4px;
   }
+
+  /* navbar links */
   .navbar-links {
     padding: var(--pd-xs);
   }
   .nav-item svg {
     font-size: var(--fs-md);
   }
+}
+
+@media screen and (max-width: 560px) {
+
+  .navbar-logo span {
+    /* display: none; */
+  }
+
+  .navbar-icons-wrapper {
+    display: none;
+  }
+  .navbar-icons-hamburger {
+    display: inherit;
+  }
+
+  /* navbar links */
+  .navbar-links {
+    display: none;
+  }
+
 }
