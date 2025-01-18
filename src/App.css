@@ -30,7 +30,7 @@ main {
 }
 nav { 
   position: sticky;
-  /* top: 20px; */
+  top: 0;
   width: 100%;
   /* z-index: 1; */
   /* overflow: auto; */
