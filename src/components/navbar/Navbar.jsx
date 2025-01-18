@@ -7,7 +7,9 @@ import Logo from '../../assets/images/logos/logo.png';
 import { GoHome } from 'react-icons/go';
 import { GiKnifeFork } from 'react-icons/gi';
 import { MdOutlineTableRestaurant, MdOutlineShoppingCart } from 'react-icons/md';
-import { RiMenu3Fill } from "react-icons/ri";
+import { RiMenu3Fill, RiCloseFill, RiTwitterXFill, RiFacebookBoxFill, RiInstagramLine  } from "react-icons/ri";
+import { LiaFacebookSquare, LiaInstagram } from "react-icons/lia";
+
 
 const navLinks = [
   { title: 'Home', icon: <GoHome />, url: '/' },
@@ -18,6 +20,7 @@ const navLinks = [
 
 const TopNavbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   return (
     <div className='navbar-wrapper'>
@@ -48,8 +51,30 @@ const TopNavbar = () => {
         <MdOutlineLightMode />
         <CgProfile />
       </div>
-      <div className='navbar-icons-hamburger'>
-        <RiMenu3Fill />
+      <div className="navbar-icons-hamburger">
+        <button className='hamburger-btn' onClick={() => setDropdownOpen(!dropdownOpen)}>
+          {dropdownOpen ? <RiCloseFill  className='close-bt'/>: <RiMenu3Fill />}
+        </button>
+        <div className={`dropdown-list ${dropdownOpen ? 'show' : ''}`}>
+          <div className='profile-section'>
+            <CgProfile />
+            <button>Log in</button>
+            <button>Sign Up</button>
+          </div>
+          <div className="dropdown-items">
+            {navLinks.map(({ title, icon, url }, index) => (
+              <NavLink key={index} to={url}>
+                <span>{icon}</span>
+                <span>{title}</span>
+              </NavLink>
+            ))}
+          </div>
+          <div className='socials'>
+              <RiFacebookBoxFill />
+              <RiInstagramLine />
+              <RiTwitterXFill />
+          </div>
+        </div>
       </div>
     </div>
   );
