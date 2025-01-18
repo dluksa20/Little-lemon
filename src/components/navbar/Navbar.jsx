@@ -58,8 +58,8 @@ const TopNavbar = () => {
         <div className={`dropdown-list ${dropdownOpen ? 'show' : ''}`}>
           <div className='profile-section'>
             <CgProfile />
-            <button className='login-btn'>Log in</button>
-            <button className='signup-btn'>Sign Up</button>
+            <button className='login-btn'><span>Log in</span></button>
+            <button className='signup-btn'><span>Sign Up</span></button>
           </div>
           <div className="dropdown-items">
             {navLinks.map(({ title, icon, url }, index) => (

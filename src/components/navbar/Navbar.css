@@ -29,6 +29,7 @@
 
   /* border radius */
   --br-sm: .5rem;
+  --br-md: 1rem;
 
   /* spacing */
   --sp-xs: .5rem;
@@ -198,10 +199,10 @@
   width: 100%;
   margin: var(--pd-sm);
   font-family: var(--font-header);
-  font-size: var(--fs-md);
-
-  border-radius: var(--br-sm) 0;
-  transition: color 0.3s ease-in-out;
+  font-size: var(--fs-sm);
+  border-radius: var(--br-md);
+  text-transform: capitalize;
+  padding: var(--pd-xs);
 }
 .signup-btn {
   border: solid 1.5px var(--primary-color-1);
@@ -209,16 +210,23 @@
 .login-btn {
   color: var(--white);
   background-color: var(--primary-color-1);
-  border: outset  1.5px var(--highlight-color-2);
-  transition: all 0.3s ease-in-out;
+  border: solid  1.5px var(--primary-color-1);
+  transition: all 0.2s ease-in-out;
+}
+.profile-section button span {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out; 
 }
 .profile-section button:hover {
   cursor: pointer;
   color: var(--white);
-  background-color: var(--primary-color-1);
-  border: inset  1.5px var(--highlight-color-2);
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.05);
+  background-color: var(--primary-color-2);
+  border: solid 1.5px var(--primary-color-1);
+}
+.profile-section button:hover span {
+  transform: scale(1.2);
+  transform-origin: center;
+  transition: all 0.2s ease-in-out;
 }
 
 .dropdown-list {
@@ -277,50 +285,45 @@
   flex-direction: column;
   width: 100%;
   padding: var(--pd-sm);
+  gap: var(--sp-xs);
+  position: relative;
 
 }
-
 .dropdown-items a {
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 100%;
-  gap: var(--sp-sm);
+  align-items: center;
+  gap: var(--sp-md);
   padding: var(--pd-sm) var(--pd-xl);
   color: var(--primary-color-1);
   text-decoration: none;
   font-family: var(--font-header);
-  text-transform: uppercase;
   font-size: var(--fs-sm);
-  background-color: var(--highlight-color-1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border: solid 1.5px var(--highlight-color-1);
-  /* background-color: #495e575a; */
-  background-color: var(--primary-color-2);
+  text-transform: uppercase;
+  border: 1.3px solid var(--primary-color-1);
   border-radius: var(--br-sm);
-
+  background-color: var(--primary-color-2);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-items a:hover {
   background-color: var(--primary-color-1);
   color: var(--highlight-color-1);
-  /* border: outset  1.5px var(--highlight-color-2); */
-  transition: all .2s ease;
-  
 }
 
-
-/* Dropdown Icons */
-
-.dropdown-items span {
-  font-size: var(--fs-md);
+.dropdown-items a span {
+  transition: transform 0.2s ease;
   display: flex;
   align-items: center;
-  transition: all .2s ease;
 }
+
 .dropdown-items a:hover span {
   transform: scale(1.2);
+  transform-origin: center;
 }
+
 
 
 
