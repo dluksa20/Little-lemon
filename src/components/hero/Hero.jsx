@@ -32,6 +32,7 @@ const slides = [
 const Hero = () => {
   return (
     <div className='hero-wrapper'>
+      <img src={slide1} alt="" />
     </div>
   )
 }
