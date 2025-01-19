@@ -37,7 +37,7 @@ const TopNavbar = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
             className={`nav-item ${hoveredIndex === index ? 'hovered' : ''}`}
-            activeClassName="active"
+            activeclassname="active"
           >
             <span className="nav-icon">{icon}</span>
             <span className={`nav-title ${hoveredIndex === index ? 'visible' : 'hidden'}`}>
