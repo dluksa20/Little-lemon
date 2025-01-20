@@ -210,6 +210,7 @@
     }
     .hero-slider {
       flex-basis: 100%;
+      border-bottom: none;
     }
   }
   
