@@ -224,7 +224,7 @@
   cursor: pointer;
   color: var(--white);
   background-color: var(--primary-color-2);
-  border: solid 1.5px var(--primary-color-1);
+  border: solid 1.5px var(--primary-color-1); 
 }
 .profile-section button:hover span {
   transform: scale(1.2);
