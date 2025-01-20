@@ -8,7 +8,6 @@ import { GoHome } from 'react-icons/go';
 import { GiKnifeFork } from 'react-icons/gi';
 import { MdOutlineTableRestaurant, MdOutlineShoppingCart } from 'react-icons/md';
 import { RiMenu3Fill, RiCloseFill, RiTwitterXFill, RiFacebookBoxFill, RiInstagramLine  } from "react-icons/ri";
-import { LiaFacebookSquare, LiaInstagram } from "react-icons/lia";
 
 
 const navLinks = [

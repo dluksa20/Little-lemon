@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "./ImageSlider.css";
 
-const ImageSlider = ({ slides, autoPlay = true, interval = 5 }) => {
+const ImageSlider = ({ slides, autoPlay = true, interval = 5000 }) => {
   const [current, setCurrent] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
   const length = slides.length;
@@ -38,6 +38,13 @@ const ImageSlider = ({ slides, autoPlay = true, interval = 5 }) => {
     setTimeout(() => setTransitioning(false), 800);
   };
 
+  const goToSlide = (index) => {
+    if (transitioning || index === current) return;
+    setTransitioning(true);
+    setCurrent(index);
+    setTimeout(() => setTransitioning(false), 800);
+  };
+
   const getClass = (index) => {
     if (index === current) return "slide current";
     if (index === (current + 1) % length) return "slide next";
@@ -51,8 +58,20 @@ const ImageSlider = ({ slides, autoPlay = true, interval = 5 }) => {
 
   return (
     <section className="slider-wrapper">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <button
+        className="left-arrow"
+        onClick={prevSlide}
+        aria-label="Previous Slide"
+      >
+        <FaArrowLeft />
+      </button>
+      <button
+        className="right-arrow"
+        onClick={nextSlide}
+        aria-label="Next Slide"
+      >
+        <FaArrowRight />
+      </button>
 
       {slides.map((slide, index) => (
         <div
@@ -68,6 +87,18 @@ const ImageSlider = ({ slides, autoPlay = true, interval = 5 }) => {
           />
         </div>
       ))}
+
+      {/* Slider Dots */}
+      <div className="slider-dots">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`dot ${index === current ? "active" : ""}`}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          ></button>
+        ))}
+      </div>
     </section>
   );
 };

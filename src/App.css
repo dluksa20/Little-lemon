@@ -55,7 +55,7 @@
 body {
   min-height: 100vh;
   display: block;
-  background-color: var(--primary-color-1);
+  background-color: var(--highlight-color-16);
 }
 #root {
   min-height: 100vh;
@@ -72,9 +72,8 @@ body {
 
 main {
   grid-area: main;
-  /* position: relative; */
+  position: relative;
   z-index: 1;
-
 }
 nav { 
   position: sticky;
