@@ -196,13 +196,13 @@
         background-color: var(--primary-color-1);
         border-left: solid 2px var(--highlight-color-1);
         border-right: solid 2px var(--highlight-color-1);
-        border-top: solid 2px var(--highlight-color-1);
+        /* border-top: solid 2px var(--highlight-color-1); */
     }
     .hero-socials {
         background-color: var(--primary-color-1);
         border-left: solid 2px var(--highlight-color-1);
         border-right: solid 2px var(--highlight-color-1);
-        border-bottom: solid 2px var(--highlight-color-1);
+        /* border-bottom: solid 2px var(--highlight-color-1); */
         border-top: solid 2px var(--highlight-color-1);
     }
     .logo-img {
