@@ -187,7 +187,20 @@
       height: calc(100vh - 81.06px);
     }
     .hero-content {
-      display: none;
+      border: none;
+      position: absolute;
+      bottom: 0;
+      /* padding: 2rem; */
+    }
+    .hero-cta {
+        padding: var(--pd-md);
+        background-color: var(--primary-color-1);
+    }
+    .hero-socials {
+        background-color: var(--primary-color-1);
+    }
+    .logo-img {
+        display: none;
     }
     .hero-slider {
       flex-basis: 100%;
