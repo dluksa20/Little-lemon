@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="hero-slider">
           <ImageSlider className="hero-slider" autoPlay={true} slides={SliderData} />
         </div>
-        <div className="hero-content">
+        {/* <div className="hero-content">
 
           <div className="hero-title">
             <div className='hero-cta'>
@@ -37,7 +37,7 @@ const Hero = () => {
               <RiInstagramLine />
               <RiTwitterXFill />
           </div>
-        </div>
+        </div> */}
       </div>
       </div>
   );
