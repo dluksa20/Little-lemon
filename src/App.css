@@ -73,6 +73,7 @@ body {
 main {
   grid-area: main;
   position: relative;
+  min-height: 800px;
   z-index: 1;
 }
 nav { 

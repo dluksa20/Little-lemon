@@ -50,7 +50,6 @@
     min-height: 700px;
     width: 100%;
     background-color: var(--highlight-color-1);
-    padding: var(--pd-md);
     position: relative;
   }
   
@@ -60,18 +59,15 @@
     justify-content: flex-end;
     height: 100%;
     width: 100%;
-    min-height: 600px;
-    border-radius: var(--br-md);
+    min-height: 800px;
     overflow: hidden;
     background-color: var(--primary-color-1);
-    padding: var(--pd-md);
-    gap: 1rem;
+
   }
 
     .hero-slider {
     height: 100%;
-    flex-basis: 100%;
-    border-radius: var(--br-md);
+    flex-basis: 60%;
     overflow: hidden;
     border: solid 2px var(--highlight-color-1);
     z-index: 0;
@@ -79,97 +75,81 @@
 
   .hero-content {
     flex-basis: 40%;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     color: var(--highlight-color-2);
     text-align: center;
-    border-radius: var(--br-md);
-    /* background: var(--highlight-color-2); */
-    backdrop-filter: blur(10px);
-    position: absolute;
-    overflow: hidden;
-    top: 12px;
-    bottom: 12px;
-    left: 12px;
-    width: 40%;
     z-index: 1;
-    box-shadow: var(--shadow-main);
+    min-height: 800px;
   }
-  
 
 
 
   .hero-title {
-    font-family: var(--font-header);
-    font-size: var(--fs-lg);
-    font-weight: bold;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 700px;
+    gap: 1rem;
+    padding: 3rem 2rem;
     border: solid 2px var(--highlight-color-1) ;
-    border-radius: var(--br-md) var(--br-md) 0 0;
     color: var(--white);
-    /* background-color: var(--primary-color-1); */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1.5s ease-in-out;
-    line-height: 1;
   }
-  
-  
-  .hero-description {
-    padding: 1rem;
-    font-family: var(--font-text);
-    font-size: var(--fs-md);
-    color: var(--highlight-color-1);
-    margin-bottom: var(--pd-lg);
-    line-height: 1.8;
-    text-align: justify;
-  }
-  
   .hero-cta {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 var(--pd-md);
-    gap: 1rem;
-    width: 100%;
+    justify-content: space-around;
     height: 100%;
-    border-left: solid var(--highlight-color-1);
-    border-right: solid 2px var(--highlight-color-1);
-  }
-  
-  .hero-cta button {
-    padding: var(--pd-sm) var(--pd-md);
-    border: none;
-    border-radius: var(--br-sm);
-    font-family: var(--font-header);
-    font-size: var(--fs-md);
-    background: linear-gradient(90deg, var(--secondary-color-1), var(--secondary-color-2));
-    color: var(--white);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .hero-cta button:first-child {
-    background: linear-gradient(90deg, var(--primary-color-1), var(--primary-color-2));
   }
 
+  .hero-cta p {
+    font-family: var(--font-text);
+    font-size: var(--fs-md);
+    max-width: 700px;
+    text-align: left;
+  }
+  .logo-img img {
+    max-width: 200px;
+    max-height: 380px;
+  }
+
+  .hero-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hero-btn {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+.hero-btn button{
+    all: unset;
+    border: solid var(--highlight-color-1);
+    height: 51px;
+    border-radius: 16px;
+    color: var(--primary-color-1);
+    background-color: var(--highlight-color-1);
+}
+
+
+
+
   .hero-socials {
-    height: 200px;
+    min-height: 100px;
     width: 100%;
     display: flex;
     align-items: center; 
     justify-content: center;
     gap: var(--sp-md);
-    border: solid 2px var(--highlight-color-1);
-    border-radius: 0rem  0rem var(--br-md) var(--br-md);
-    /* background-color: var(--primary-color-1); */
   }
   .hero-socials svg {
     font-size: var(--fs-lg);
-    color: var(--highlight-color-2);
+    color: var(--highlight-color-1);
   }
   
   @keyframes fadeIn {

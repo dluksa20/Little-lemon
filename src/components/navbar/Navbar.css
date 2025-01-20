@@ -53,7 +53,7 @@
   align-items: center;
   background: var(--primary-color-1);
   padding: var(--pd-sm) var(--pd-xl);
-  box-shadow: var(--shadow-main);
+  /* box-shadow: var(--shadow-main); */
   border-bottom: 1px solid var(--primary-color-1);
 }
 
