@@ -3,7 +3,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import Logo from '../../assets/images/logos/logo.png';
+import Logo from '../../assets/images/logos/logo3.png';
 import { GoHome } from 'react-icons/go';
 import { GiKnifeFork } from 'react-icons/gi';
 import { MdOutlineTableRestaurant, MdOutlineShoppingCart } from 'react-icons/md';
@@ -44,12 +44,12 @@ const TopNavbar = () => {
             </span>
           </NavLink>
         ))}
+          <div className='navbar-icons-wrapper'>
+            <MdOutlineLightMode />
+            <CgProfile />
+          </div>
       </div>
 
-      <div className='navbar-icons-wrapper'>
-        <MdOutlineLightMode />
-        <CgProfile />
-      </div>
       <div className="navbar-icons-hamburger">
         <button className='hamburger-btn' onClick={() => setDropdownOpen(!dropdownOpen)}>
           {dropdownOpen ? <RiCloseFill  className='close-btn'/>: <RiMenu3Fill />}
