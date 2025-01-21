@@ -55,7 +55,7 @@
   background: var(--primary-color-1);
   padding: 0 var(--pd-xl);
   box-shadow: var(--shadow-main);
-  border: 2px solid var(--highlight-color-1);
+  /* border: 2px solid var(--highlight-color-1); */
   border-top: none;
 }
 
