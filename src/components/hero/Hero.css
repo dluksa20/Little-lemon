@@ -140,7 +140,7 @@
   .hero-btn button:last-child {
     background-color: var(--primary-color-2);
     color: var(--highlight-color-2);
-    border: solid 2px var(--primary-color-3);
+    border: solid 2px var(--highlight-color-1);
   }
   .hero-btn button:hover {
     cursor: pointer;
