@@ -130,22 +130,23 @@
     all: unset;
     font-family: var(--font-header);
     font-size: var(--fs-md);
-    border: solid 2px var(--highlight-color-1);
+    text-transform:uppercase ;
+    border: solid 2px var(--primary-color-3);
     color: var(--highlight-color-1);
-    border-radius: var(--br-sm);
+    /* border-radius: var(--br-sm); */
     padding: var(--pd-md);
     transition: all 0.3s ease-in-out; /* Ensures smooth transitions */
   }
   
   .hero-btn button:last-child {
-    background-color: var(--primary-color-2);
-    color: var(--highlight-color-2);
+    color: var(--highlight-color-1);
     border: solid 2px var(--highlight-color-1);
   }
   .hero-btn button:hover {
     cursor: pointer;
-    color: var(--highlight-color-2); 
-    background-color: var(--primary-color-2); 
+    color: var(--highlight-color-1); 
+    background-color: var(--primary-color-3); 
+    border: solid 2px var(--highlight-color-1);
     transform: scale(1.02) translateY(-2px); 
     transition: all 0.3s ease-in-out; 
   }
