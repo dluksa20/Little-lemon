@@ -55,7 +55,7 @@
 body {
   min-height: 100vh;
   display: block;
-  background-color: var(--highlight-color-16);
+  background-color: var(--primary-color-1);
 }
 #root {
   min-height: 100vh;
