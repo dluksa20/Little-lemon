@@ -67,6 +67,7 @@ body {
     "main main"
     "footer footer";
     z-index: -3;
+    background-color: var(--primary-color-1);
 }
 
 
