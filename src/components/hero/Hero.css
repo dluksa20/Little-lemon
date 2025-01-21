@@ -197,7 +197,7 @@
     }
     .hero-btn button {
         color: var(--highlight-color-1);
-        border:solid 2px var(--highlight-color-1);
+
     }
     .hero-description p {
         color: var(--highlight-color-1);
@@ -207,7 +207,7 @@
         padding: var(--pd-sm);
         padding-top: var(--pd-lg);
         /* border: solid 2px var(--highlight-color-1); */
-        border-radius: .5rem;
+        /* border-radius: var(--br-sm); */
         background-color: var(--primary-color-1);
 
         /* background-color: var(--primary-color-1); */
