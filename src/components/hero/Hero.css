@@ -187,21 +187,27 @@
     .hero-content {
         box-shadow: var(--shadow-hover);
         z-index: 4;
+        padding: 1rem;
     }
     .hero-content {
-        background-color: #EDEFEE;
+        background-color: var(--primary-color-3);
+        border-top: solid 2px var(--highlight-color-1);
     }
     .hero-btn button {
         color: var(--highlight-color-2);
-        border:solid 1.5px var(--primary-color-1);
+        border:solid 2px var(--highlight-color-1);
     }
     .hero-description p {
-        color: #333333;
+        color: var(--highlight-color-1);
     }
 
     .hero-cta {
         padding: var(--pd-sm);
         padding-top: var(--pd-lg);
+        border: solid 1px var(--primary-color-1);
+        border-radius: .5rem;
+        background-color: var(--primary-color-1);
+
         /* background-color: var(--primary-color-1); */
         /* border-top: solid 2px var(--highlight-color-1);
         border-left: solid 2px var(--highlight-color-1); */
