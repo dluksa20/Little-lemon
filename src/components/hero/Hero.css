@@ -47,7 +47,7 @@
   
   .hero {
     display: flex;
-    height: calc(100vh - 97.06px);
+    height: calc(100vh - 72.4px);
     min-height: fit-content;
     width: 100%;
     background-color: var(--highlight-color-1);
@@ -180,7 +180,7 @@
   /* Media Queries */
   @media screen and (max-width: 990px) {
     .hero {
-      height: calc(100vh - 68px);
+      height: calc(100vh - 66px);
     }
     .hero-wrapper{
         display: flex;
@@ -234,7 +234,7 @@
   
   @media screen and (max-width: 620px) {
     .hero {
-      height: calc(100vh - 58px);
+      height: calc(100vh - 56px);
     }
   }
   
