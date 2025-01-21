@@ -29,7 +29,7 @@ const Hero = () => {
 
             <div className="hero-btn">
                 <button>Reserve a Table</button>
-                <button>Order Online</button>
+                <button className='order-online-btn'>Order Online</button>
             </div>
           </div>
 

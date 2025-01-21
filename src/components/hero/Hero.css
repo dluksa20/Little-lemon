@@ -135,6 +135,10 @@
     transition: all 0.3s ease-in-out; /* Ensures smooth transitions */
   }
   
+  .hero-btn button:last-child {
+    background-color: var(--primary-color-2);
+    color: var(--highlight-color-2);
+  }
   .hero-btn button:hover {
     cursor: pointer;
     color: var(--highlight-color-2); 
