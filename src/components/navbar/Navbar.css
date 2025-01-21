@@ -213,7 +213,7 @@
   right: 0;
   background-color: var(--primary-color-3);
   box-shadow: var(--shadow-main);
-  border-left: solid 2px var(--primary-color-1);
+  border: solid 2px var(--primary-color-1);
   z-index: -1;
   opacity: 0;
   visibility:hidden;
