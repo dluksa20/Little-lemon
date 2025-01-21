@@ -211,7 +211,7 @@
   min-width: 250px;
   top: 0;
   right: 0;
-  background-color: var(--primary-color-1);
+  background-color: var(--primary-color-3);
   box-shadow: var(--shadow-main);
   border-left: solid 2px var(--primary-color-1);
   z-index: -1;
@@ -274,15 +274,13 @@
   font-size: var(--fs-md);
   text-transform: uppercase;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  border-bottom: solid 2px var(--primary-color-1);
-  border-top: solid 2px var(--primary-color-1);
+  border: solid 2px var(--primary-color-1);
 }
 
 .dropdown-items a:hover {
   background-color: var(--primary-color-1);
   color: var(--highlight-color-1);
-  border-bottom: solid 2px var(--highlight-color-1);
-  border-top: solid 2px var(--highlight-color-1);
+  border: solid 2px var(--highlight-color-1);
 }
 
 .dropdown-items a span {
