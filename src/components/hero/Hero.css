@@ -2,6 +2,7 @@
     /* Colors */
     --primary-color-1: #495E57;
     --primary-color-2: #F4CE14;
+    --primary-color-3: #394a45;
     --secondary-color-1: #EE9972;
     --secondary-color-2: #FBDABB;
     --highlight-color-1: #EDEFEE;
@@ -69,7 +70,7 @@
     height: 100%;
     flex-basis: 60%;
     overflow: hidden;
-    border: solid 2px var(--highlight-color-1);
+    /* border: solid 2px var(--primary-color-1); */
     border-top: none;
     z-index: 0;
   }
@@ -81,8 +82,8 @@
     color: var(--highlight-color-2);
     text-align: center;
     z-index: 1;
-    border-bottom: solid 2px var(--highlight-color-1);
-    border-right: solid 2px var(--highlight-color-1);
+    /* border: solid 2px var(--primary-color-3); */
+    /* border-right: solid 2px var(--primary-color-3); */
   }
 
 
@@ -192,14 +193,14 @@
         padding: var(--pd-sm);
         padding-top: var(--pd-lg);
         /* background-color: var(--primary-color-1); */
-        border-top: solid 2px var(--highlight-color-1);
-        border-left: solid 2px var(--highlight-color-1);
+        /* border-top: solid 2px var(--highlight-color-1);
+        border-left: solid 2px var(--highlight-color-1); */
         /* border-right: solid 2px var(--highlight-color-1); */
     }
     
     .hero-socials {
         /* background-color: var(--primary-color-1); */
-        border-left: solid 2px var(--highlight-color-1);
+        /* border-left: solid 2px var(--highlight-color-1); */
         /* border-right: solid 2px var(--highlight-color-1); */
     }
     .logo-img {
