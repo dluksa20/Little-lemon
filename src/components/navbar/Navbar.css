@@ -2,6 +2,7 @@
   /* colors */
   --primary-color-1: #495E57;
   --primary-color-2: #F4CE14;
+  --primary-color-3: #394a45;
   --secondary-color-1: #EE9972;
   --secondary-color-2: #FBDABB;
   --highlight-color-1: #EDEFEE;
@@ -52,9 +53,9 @@
   gap: var(--sp-lg);
   justify-content: space-between;
   align-items: center;
-  background: var(--primary-color-1);
+  background:var(--primary-color-3);
   padding: 0 var(--pd-xl);
-  box-shadow: var(--shadow-main);
+  box-shadow: var(--shadow-hover);
   /* border: 2px solid var(--highlight-color-1); */
   border-top: none;
 }
@@ -94,10 +95,10 @@
   transition: all 0.3s ease-in;
 }
 .navbar-links .nav-item.active {
-  background: var(--primary-color-1); 
+  /* background: var(--primary-color-1);  */
+  
   color: var(--highlight-color-1); 
-  border-left: solid  1.5px var(--highlight-color-1);
-  border-right: solid  1.5px var(--highlight-color-1);
+  border: solid  1.5px var(--highlight-color-1);
   transition: color 0.2s ease-in-out;
 }
 .nav-title {
