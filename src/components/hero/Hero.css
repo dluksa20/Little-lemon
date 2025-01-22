@@ -203,8 +203,8 @@
     }
     .hero-btn button {
         color: var(--highlight-color-1);
-        backdrop-filter: blur(4px);
-        background-color: #394a4585;
+        backdrop-filter: blur(2px);
+        /* background-color: #394a4585; */
 
     }
     .hero-btn button:first-child {
@@ -213,6 +213,7 @@
     .hero-description p {
         color: var(--highlight-color-1);
         max-width: 90%;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     }
 
     .hero-cta {
