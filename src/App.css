@@ -56,7 +56,7 @@
 body {
   min-height: 100vh;
   display: block;
-  background-color: var(--primary-color-1);
+  background-color: var(--highlight-color-1);
 }
 #root {
   min-height: 100vh;
@@ -68,7 +68,7 @@ body {
     "main main"
     "footer footer";
     z-index: -3;
-    background-color: var(--primary-color-1);
+    background-color: var(--highlight-color-1);
 }
 
 

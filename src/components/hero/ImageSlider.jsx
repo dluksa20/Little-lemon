@@ -58,48 +58,50 @@ const ImageSlider = ({ slides, autoPlay = true, interval = 5000 }) => {
 
   return (
     <section className="slider-wrapper">
-      <button
-        className="left-arrow"
-        onClick={prevSlide}
-        aria-label="Previous Slide"
-      >
-        <FaArrowLeft />
-      </button>
-      <button
-        className="right-arrow"
-        onClick={nextSlide}
-        aria-label="Next Slide"
-      >
-        <FaArrowRight />
-      </button>
-
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={getClass(index)}
-          role="img"
-          aria-hidden={index !== current}
-        >
-          <img
-            src={slide.image}
-            alt={slide.alt || `Slide ${index + 1}`}
-            className="slider-image"
-          />
-        </div>
-      ))}
-
-      {/* Slider Dots */}
-      <div className="slider-dots">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${index === current ? "active" : ""}`}
-            onClick={() => goToSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          ></button>
-        ))}
+      <div className="slider-overlay">
       </div>
-    </section>
+        <button
+          className="left-arrow"
+          onClick={prevSlide}
+          aria-label="Previous Slide"
+        >
+          <FaArrowLeft />
+        </button>
+        <button
+          className="right-arrow"
+          onClick={nextSlide}
+          aria-label="Next Slide"
+        >
+          <FaArrowRight />
+        </button>
+
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={getClass(index)}
+            role="img"
+            aria-hidden={index !== current}
+          >
+            <img
+              src={slide.image}
+              alt={slide.alt || `Slide ${index + 1}`}
+              className="slider-image"
+            />
+          </div>
+        ))}
+
+        {/* Slider Dots */}
+        <div className="slider-dots">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${index === current ? "active" : ""}`}
+              onClick={() => goToSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            ></button>
+          ))}
+        </div>
+      </section>
   );
 };
 
