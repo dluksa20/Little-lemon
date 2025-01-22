@@ -56,7 +56,7 @@
   background:var(--primary-color-3);
   padding: 0 var(--pd-xl);
   box-shadow: var(--shadow-hover);
-  /* border-bottom: 2px solid var(--primary-color-1); */
+  border-bottom: 1px solid var(--primary-color-1);
   border-top: none;
 }
 

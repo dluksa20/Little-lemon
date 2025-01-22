@@ -10,7 +10,7 @@ const Hero = () => {
     <div className="hero">
       <div className='hero-wrapper'>
       <div className="hero-slider">
-          <ImageSlider className="hero-slider" autoPlay={true} slides={SliderData} />
+          <ImageSlider className="slider" autoPlay={true} slides={SliderData} />
         </div>
 
         <div className="hero-content">
