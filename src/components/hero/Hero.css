@@ -202,6 +202,13 @@
         backdrop-filter: blur(6px);  
         border: solid 2px var(--highlight-color-1);
     }
+    .hero-btn button:last-child {
+        background-color: var(--primary-color-1);
+      }
+      .hero-btn button:hover {
+        background-color: var(--primary-color-3); 
+      }
+      
     .hero-description p {
         color: var(--highlight-color-1);
         max-width: 90%;
