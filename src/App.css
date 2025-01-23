@@ -57,6 +57,7 @@ body {
   min-height: 100vh;
   display: block;
   background-color: var(--highlight-color-1);
+  min-width: 300px;
 }
 #root {
   min-height: 100vh;
@@ -90,7 +91,7 @@ footer {
   background-color: aqua;
   height: 100px;
   width: 100%;
-  position: relative  ;
+  position: relative;
   bottom: 0;
   z-index: 2;
 }
