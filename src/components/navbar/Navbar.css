@@ -307,7 +307,7 @@
   }
 
   .navbar-logo span {
-    /* display: none; */
+    display: none;
     font-size: var(--fs-md);
   }
   .navbar-logo img {
