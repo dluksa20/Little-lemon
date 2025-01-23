@@ -57,7 +57,8 @@ body {
   min-height: 100vh;
   display: block;
   background-color: var(--highlight-color-1);
-  min-width: 300px;
+  min-width: 260px;
+  /* overflow: scroll; */
 }
 #root {
   min-height: 100vh;
@@ -93,5 +94,5 @@ footer {
   width: 100%;
   position: relative;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
 }

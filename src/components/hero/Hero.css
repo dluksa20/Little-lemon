@@ -49,7 +49,7 @@
     display: flex;
     height: calc(100vh - 72.4px);
     min-height: fit-content;
-    min-width: 300px;
+    /* min-width: 300px; */
     width: 100%;
     position: relative;
     border: solid 2px var(--primary-color-3);
@@ -189,7 +189,6 @@
     }
     .logo-img {
         margin-bottom: var(--pd-lg);
-        max-height: 250px;
     }
     .hero-content {
         position: absolute;
@@ -224,6 +223,10 @@
   @media screen and (max-width: 620px) {
     .hero {
       height: calc(100vh - 56px);
+    }
+    .logo-img {
+        margin-bottom: var(--pd-lg);
+        max-height: 210px;
     }
     
   }
