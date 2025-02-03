@@ -240,3 +240,16 @@
             transition-delay: .2s;
   }
   
+
+  .swiper-button-prev,
+.swiper-button-next {
+    display: flex;
+}
+
+/* Hide arrows on small screens */
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+}
