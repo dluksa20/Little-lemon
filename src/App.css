@@ -57,8 +57,6 @@ body {
   min-height: 100vh;
   display: block;
   background-color: var(--highlight-color-1);
-  min-width: 260px;
-  /* overflow: scroll; */
 }
 #root {
   min-height: 100vh;

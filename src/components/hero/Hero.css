@@ -44,7 +44,9 @@
     --shadow-main: 0px 10px 12px rgba(0, 0, 0, 0.3);
     --shadow-hover: 0px 8px 12px rgba(0, 0, 0, 0.3);
   }
-  
+
+
+  /* hero main */
   .hero {
     display: flex;
     height: calc(100vh - 72.4px);
@@ -74,6 +76,9 @@
     z-index: 0;
 
   }
+
+
+  /* hero content */
 
   .hero-content {
     flex-basis: 40%;
