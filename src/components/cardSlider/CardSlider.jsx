@@ -28,6 +28,7 @@ const CardSlider = () => {
                 400: { slidesPerView: 1,  navigation: false }, // Small screens (1 slide)
                 768: { slidesPerView: 2 }, // Medium screens (2 slides)
                 1440: { slidesPerView: 3 }, // Large screens (3 slides)
+                1920: { slidesPerView: 4 }, // Large screens (3 slides)
             }}
             className="mySwiper"
         >

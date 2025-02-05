@@ -50,7 +50,7 @@
     height: 600px;
     width: 100%;
   }
-  .card {
+  .card { 
     width: 100%;
     max-width: 500px;
     justify-self: center;
@@ -70,9 +70,6 @@
   }
   
   
-  .wrapper:hover .card_img {
-    height: 350px;
-  } 
   
   .wrapper .heart{
     position: absolute;
