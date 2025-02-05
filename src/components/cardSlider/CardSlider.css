@@ -69,10 +69,6 @@
     transition: ease all .3s;
   }
   
-  .wrapper:hover {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
   
   .wrapper:hover .card_img {
     height: 350px;
@@ -85,7 +81,7 @@
     z-index: 1;
     width: 25px;
     height: 25px;
-    color: #fff;
+    color: var(--highlight-color-2);
   }
   
   .wrapper .heart svg, .wrapper .heart path, .wrapper .heart circle {
@@ -97,34 +93,9 @@
     cursor: pointer;
   }
   
-   .color_bg {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-  }
-  
-  .color_bg.batman {
-    background-color: #b82d44;
-  }
-  
-  .color_bg.blackpanter {
-    background-color: #1d1d1d;
-  }
-  
-  .color_bg.arthur {
-    background-color: #153a82;
-  }
-  
-  .color_bg.kashima {
-    background-color: #3f4a69;
-  }
-  
   .card_img {
-    background-size: contain;
-    background-position: center bottom;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     bottom: calc(100% - 300px);

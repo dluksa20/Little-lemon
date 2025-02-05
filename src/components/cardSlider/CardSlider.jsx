@@ -3,6 +3,7 @@ import './CardSlider.css';
 import food1 from '../../assets/foods/bruschetta.png';
 import food2 from '../../assets/foods/greeksalad.png';
 import food3 from '../../assets/foods/lemondesert.png';
+import blank from '../../assets/foods/blank.png';
 
 // Import Swiper components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -37,40 +38,62 @@ const CardSlider = () => {
                     old_price="9,999"
                     newPrice="9999"
                     dollar="$"
-                    alt="batman"
+                    alt="bruschetta"
                     exp_date="10-08-2022"
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <Card
                     title="What is Lorem Ipsum?"
-                    images="../images/blackpanter.png"
+                    images={food2}
                     old_price="599"
                     newPrice="500"
                     dollar="$"
-                    alt="blackpanter"
+                    alt="greeksalad"
                     exp_date="10-08-2022"
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <Card
                     title="What is Lorem Ipsum?"
-                    images="../images/arthur.png"
+                    images={food3}
                     old_price="7999"
                     newPrice="7000"
                     dollar="$"
-                    alt="arthur"
+                    alt="lemondesert"
                     exp_date="10-08-2022"
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <Card
                     title="What is Lorem Ipsum?"
-                    images="../images/kashima.png"
+                    images={blank}
                     old_price="999"
                     newPrice="500"
                     dollar="$"
-                    alt="kashima"
+                    alt="blank"
+                    exp_date="10-08-2022"
+                />
+            </SwiperSlide>
+            <SwiperSlide>
+                <Card
+                    title="What is Lorem Ipsum?"
+                    images={blank}
+                    old_price="999"
+                    newPrice="500"
+                    dollar="$"
+                    alt="blank"
+                    exp_date="10-08-2022"
+                />
+            </SwiperSlide>
+            <SwiperSlide>
+                <Card
+                    title="What is Lorem Ipsum?"
+                    images={blank}
+                    old_price="999"
+                    newPrice="500"
+                    dollar="$"
+                    alt="blank"
                     exp_date="10-08-2022"
                 />
             </SwiperSlide>
