@@ -1,5 +1,8 @@
 import React from 'react';
 import './CardSlider.css';
+import food1 from '../../assets/foods/bruschetta.png';
+import food2 from '../../assets/foods/greeksalad.png';
+import food3 from '../../assets/foods/lemondesert.png';
 
 // Import Swiper components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -30,7 +33,7 @@ const CardSlider = () => {
             <SwiperSlide>
                 <Card
                     title="What is Lorem Ipsum?"
-                    images="../images/batman.png"
+                    images={food1}
                     old_price="9,999"
                     newPrice="9999"
                     dollar="$"
