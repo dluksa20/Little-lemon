@@ -1,0 +1,128 @@
+
+/* Root variables */
+:root {
+    /* colors */
+    --primary-color-1: #495E57;
+    --primary-color-2: #F4CE14;
+    --primary-color-3: #394a45;
+    --secondary-color-1: #EE9972;
+    --secondary-color-2: #FBDABB;
+    --highlight-color-1: #EDEFEE;
+    --highlight-color-2: #333333;
+    --white: white;
+
+    /* gradients */
+    --gradient-primary: linear-gradient(135deg, rgba(73, 94, 87, 0.6), rgba(244, 206, 20, 0.6));
+
+    /* fonts */
+    --font-text: 'Karla', sans-serif;
+    --font-header: 'Markazi Text', serif;
+
+    /* font sizes */
+    --fs-sm: 1rem;
+    --fs-md: 1.2rem;
+    --fs-lg: 2rem;
+
+    /* padding */
+    --pd-xxs: 0.1rem;
+    --pd-xs: 0.25rem;
+    --pd-sm: 0.5rem;
+    --pd-md: 0.75rem;
+    --pd-lg: 1rem;
+    --pd-xl: 1.5rem;
+
+    /* border radius */
+    --br-sm: 0.5rem;
+    --br-md: 1rem;
+
+    /* spacing */
+    --sp-xs: 0.5rem;
+    --sp-sm: 1rem;
+    --sp-md: 2rem;
+    --sp-lg: 3rem;
+
+    /* box shadows */
+    --shadow-main: 0px 10px 12px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    height: 575px;
+    width: 430px;
+    max-width: 500px;
+    padding: var(--pd-lg);
+}
+.wrapper {
+    position: relative;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: .5rem;
+    overflow: hidden;
+
+}
+.card-img {
+    width: 100%;
+    height: 50%;
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.heart svg {
+    font-size: 4rem;
+}
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    font-size: var(--fs-lg);
+}
+.item-price {
+    font-family: var(--font-text);
+    font-size: var(--fs-lg);
+}
+.cart {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    border-radius: .3rem;
+    padding: .75rem;
+    background-color: var(--primary-color-1);
+    color: var(--white);
+    font-size: var(--fs-md);
+    font-family: var(--font-text);
+    font-weight: 500;
+}
+.card-title {
+    width: calc(100% - 40px);
+    position: relative;
+    left: 20px;
+}
+.card-title h1{
+    font-family: var(--font-header);
+    font-size: var(--fs-lg);
+}
+.ingredients-group {
+    display: flex;
+    
+    justify-content: space-around;
+    font-size: var(--fs-md);
+}
+.ingredients-group button {
+    /* padding: .2rem; */
+    width: 100%;
+}

@@ -1,6 +1,6 @@
-import food1 from '../../assets/foods/bruschetta.png';
-import food2 from '../../assets/foods/greeksalad.png';
-import food3 from '../../assets/foods/lemondesert.png';
+import food1 from '../../assets/foods/bruchetta.jpg';
+import food2 from '../../assets/foods/greeksalad.jpg';
+import food3 from '../../assets/foods/lemondessert.jpg';
 import blank from '../../assets/foods/blank.png';
 
 const cardData = [
