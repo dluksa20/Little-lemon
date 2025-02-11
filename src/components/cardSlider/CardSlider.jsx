@@ -1,50 +1,68 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './CardSlider.css';
-import food1 from '../../assets/foods/bruchetta.jpg';
-import food2 from '../../assets/foods/greeksalad.jpg';
-import food3 from '../../assets/foods/lemondessert.jpg';
-import blank from '../../assets/foods/blank.png';
-import cardData from './CardData';
-// Import Swiper components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// Import Card component
 import Card from "./Card";
+import cardData from './CardData';
+import { MdArrowBack, MdArrowForward } from "react-icons/md"; // Import icons
 
 const CardSlider = () => {
+    const swiperRef = useRef(null);
+    const [slidesToShow, setSlidesToShow] = useState(1);
+    const cardWidth = 500; // Set the width of each card (adjust as needed)
+
+    // Function to dynamically set slides per view based on screen width
+    const updateSlidesPerView = () => {
+        const screenWidth = window.innerWidth;
+        const containerWidth = screenWidth * 1; // Assuming the container takes 100% of the screen width
+        const maxSlides = Math.floor(containerWidth / cardWidth);
+        setSlidesToShow(Math.min(Math.max(1, maxSlides), 5)); // Ensure at least 1 slide and at most 5 slides
+    };
+
+    // Run on mount and listen for window resize
+    useEffect(() => {
+        updateSlidesPerView(); 
+        window.addEventListener("resize", updateSlidesPerView);
+        return () => window.removeEventListener("resize", updateSlidesPerView);
+    }, []);
+
+
+
     return (
-        <Swiper
-            spaceBetween={0} // Space between slides
-            pagination={{ clickable: true }}
-            navigation={true} // Enable arrows
-            modules={[Pagination, Navigation]}
-            breakpoints={{
-                400: { slidesPerView: 1,  navigation: false }, // Small screens (1 slide)
-                990: { slidesPerView: 2 }, // Medium screens (2 slides)
-                1440: { slidesPerView: 3 }, // Large screens (3 slides)
-                1920: { slidesPerView: 4 }, // Large screens (3 slides)
-            }}
-            className="card-slider"
-        >
-            {cardData.map(({img, title, content, price}, index) => (
-                <SwiperSlide key={index}>
-                    <Card
-                        title={title}
-                        images={img}
-                        item_price={price}
-                        dollar=""
-                        alt={title}
-                    />
-                </SwiperSlide>
-            ))}
-            
-        </Swiper>
+        <div className="card-slider-container">
+            {/* Custom Previous Button */}
+            {/* <button className="swiper-button prev" onClick={() => swiperRef.current?.slidePrev()}>
+                <MdArrowBack />
+            </button> */}
+
+            <Swiper
+                onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                    console.log("Swiper initialized:", swiper); // Debugging
+                }}
+                spaceBetween={20}
+                pagination={{ clickable: true }}
+                navigation={true} // Disable default navigation
+                slidesPerView={slidesToShow} // Dynamic slides per view
+                modules={[Pagination, Navigation]}
+                className="card-slider"
+                key={slidesToShow} // Force re-render when slidesToShow changes
+            >
+                {cardData.map(({ img, title, content, price }, index) => (
+                    <SwiperSlide key={index}>
+                        <Card title={title} images={img} item_price={price} dollar="" alt={title} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+
+            {/* Custom Next Button */}
+            {/* <button className="swiper-button next" onClick={() => swiperRef.current?.slideNext()}>
+                <MdArrowForward />
+            </button> */}
+        </div>
     );
 };
 
