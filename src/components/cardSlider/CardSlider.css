@@ -53,12 +53,12 @@
     max-width: 3200px;
     height: 600px;
     border: solid 1px black;
+    background-color: white;
 }
 
 .swiper-slide {
     display: flex !important;
     justify-content: center;
-
 }
 
 
@@ -69,7 +69,7 @@
     height: 100px;
     top: 40%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.6);
     border: solid 1px black;
     color: var(--highlight-color-2);
     cursor: pointer;
