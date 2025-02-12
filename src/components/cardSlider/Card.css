@@ -124,5 +124,5 @@
 }
 .ingredients-group button {
     /* padding: .2rem; */
-    width: 100%;
+    width: fit-content;
 }
