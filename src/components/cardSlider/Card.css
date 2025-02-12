@@ -50,7 +50,7 @@
     height: 575px;
     width: 100%;
     max-width: 400px;
-    padding: var(--pd-lg);
+    padding: var(--pd-sm);
 }
 .wrapper {
     position: relative;
