@@ -21,6 +21,8 @@
     --fs-sm: 1rem;
     --fs-md: 1.2rem;
     --fs-lg: 2rem;
+    --fs-xl: 3rem;
+    --fs-xxl: 4rem;
 
     /* padding */
     --pd-xxs: 0.1rem;
@@ -50,55 +52,93 @@
     justify-content: center;
     width: 100%;
     z-index: 1;
-    max-width: 3200px;
-    height: 600px;
-    border: solid 1px black;
-    background-color: white;
+    max-width: 3000px;
+    height: 630px;
 }
 
 .swiper-slide {
     display: flex !important;
     justify-content: center;
+    align-items: center;
+}
+.card-slider-container {
+    padding: var(--pd-xl) var(--pd-md);
+    margin: var(--sp-lg) 0;
 }
 
+.section-title {
+    font-family: var(--font-header);
+    font-size: var(--fs-xxl); 
+    color: var(--primary-color-1);
+    text-align: left; /* Align text to the left */
+    margin-bottom: var(--sp-lg);
+    position: relative;
+    display: block; /* Ensure it takes full width */
+    padding-bottom: var(--pd-xs);
+    width: 100%; /* Ensure it takes full width */
+    padding-left: calc((100vw - 90vw) / 2); /* Align with the 90vw line */
+}
 
-/* Custom Swiper Buttons */
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: calc((100vw - 90vw) / 2); /* Align with the title */
+    bottom: 0;
+    width: 90vw; /* 90% of the viewport width */
+    height: 4px;
+    background-color: var(--primary-color-2); /* Yellow line */
+    border-radius: 2px;
+}
+.swiper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    max-width: 3000px;
+    height: 630px;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
 .swiper-button {
     position: absolute;
-    display: block;
-    height: 100px;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: solid 1px black;
-    color: var(--highlight-color-2);
-    cursor: pointer;
     z-index: 10;
-    font-size: 3rem;
+    background-color: var(--white);
+    color: var(--white);
+    border: solid 2px var(--primary-color-1);
+    padding: var(--pd-sm);
+    border-radius: 50%;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
-    width: 60px; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button.prev {
+    left: 10px;
+}
+
+.swiper-button.next {
+    right: 10px;
 }
 
 .swiper-button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-color-1);
+    transform: translateY(-50%) scale(1.1);
+    border: double 3px var(--highlight-color-1);
 }
 
-.prev {
-    left: 0;
-    border-left: none;
+.swiper-button svg {
+    font-size: 2rem;
+    fill: var(--primary-color-1);
 }
-
-.next {
-    right: 0;
-    border-right: none;
-}
-
-@media screen and (max-width: 990px) {
-    .prev, .next {
-        display: none;
-    }
-    
+.swiper-button:hover  svg{
+    fill: var(--white);
 }

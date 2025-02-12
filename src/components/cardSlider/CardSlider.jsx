@@ -9,7 +9,6 @@ import Card from "./Card";
 import cardData from './CardData';
 import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
-
 const CardSlider = () => {
     const swiperRef = useRef(null);
     const [slidesToShow, setSlidesToShow] = useState(1);
@@ -30,10 +29,10 @@ const CardSlider = () => {
         return () => window.removeEventListener("resize", updateSlidesPerView);
     }, []);
 
-
-
     return (
         <div className="card-slider-container">
+            {/* Section Title */}
+            <h2 className="section-title">Our Most Loved</h2>
 
             <Swiper
                 onSwiper={(swiper) => {
@@ -48,21 +47,30 @@ const CardSlider = () => {
                 className="card-slider"
                 key={slidesToShow} // Force re-render when slidesToShow changes
             >
-            {/* Custom Previous Button */}
-            <button className="swiper-button prev" onClick={() => swiperRef.current?.slidePrev()}>
-            <MdOutlineKeyboardDoubleArrowLeft />
+                {/* Custom Previous Button */}
+                <button className="swiper-button prev" onClick={() => swiperRef.current?.slidePrev()}>
+                    <MdOutlineKeyboardDoubleArrowLeft />
+                </button>
 
-            </button>
-                {cardData.map(({ img, title, content, price }, index) => (
+                {/* Map through cardData and pass all required props */}
+                {cardData.map(({ img, title, content, price, ingredients }, index) => (
                     <SwiperSlide key={index}>
-                        <Card title={title} images={img} item_price={price} dollar="" alt={title} />
+                        <Card
+                            title={title}
+                            images={img}
+                            item_price={price}
+                            currency="$" // Add currency prop if needed
+                            ingredients={ingredients} // Pass ingredients here
+                            content={content} // Pass content here
+                            alt={title}
+                        />
                     </SwiperSlide>
                 ))}
-            {/* Custom Next Button */}
-            <button className="swiper-button next" onClick={() => swiperRef.current?.slideNext()}>
-            <MdOutlineKeyboardDoubleArrowRight />
 
-            </button>
+                {/* Custom Next Button */}
+                <button className="swiper-button next" onClick={() => swiperRef.current?.slideNext()}>
+                    <MdOutlineKeyboardDoubleArrowRight />
+                </button>
             </Swiper>
         </div>
     );

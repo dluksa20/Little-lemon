@@ -1,16 +1,20 @@
-import React from 'react'
-import { CiHeart } from "react-icons/ci";
+import React, { useState } from 'react';
+import { CiHeart } from 'react-icons/ci';
 import { MdOutlineShoppingCart } from 'react-icons/md';
-import './Card.css'
-
-
+import './Card.css';
 
 export default function Card(props) {
-    let { title, item_price, currency, images} = props
-    return (
+    const { title, item_price, currency, images, ingredients, content } = props;
+    const [isExpanded, setIsExpanded] = useState(false);
 
+    // Function to toggle content expansion
+    const toggleExpand = () => {
+        setIsExpanded(!isExpanded);
+    };
+
+    return (
         <div className="card">  
-        <div className="wrapper">
+            <div className="wrapper">
                 <div className="card-img">
                     <img src={images} alt={title} />
                 </div>
@@ -18,12 +22,28 @@ export default function Card(props) {
                     <CiHeart /> 
                 </div>
                 <div className="card-info">
-                    <div className='card-title'>
+                    <div className="card-title">
                         <h1>{title}</h1>
-                        <div className='ingredients-group'>
-                            <button className='ingredient-1'>🍅Tomatoes</button>
-                            <button className='ingredient-2'>🧄Garlic</button>
-                            <button className='ingredient-3'>🍞Craft bread</button>
+                        <div className="ingredients-group">
+                            {ingredients &&
+                                ingredients.map((ingredient, index) => (
+                                    <button
+                                        key={index}
+                                        className={`ingredient-${index + 1}`}
+                                        style={{ backgroundColor: ingredient.color }}
+                                    >
+                                        {ingredient.name}
+                                    </button>
+                                ))}
+                        </div>
+                        {/* Content with Read More toggle */}
+                        <div className="card-content">
+                            <p className={`content-text ${isExpanded ? 'expanded' : 'collapsed'}`}>
+                                {content}
+                            </p>
+                            <button className="read-more" onClick={toggleExpand}>
+                                {isExpanded ? 'Read Less' : 'Read More'}
+                            </button>
                         </div>
                     </div>
                     <div className="action">
@@ -38,5 +58,5 @@ export default function Card(props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
