@@ -50,13 +50,9 @@
     justify-content: center;
     width: 100%;
     z-index: 1;
-    max-width: 2500px;
+    max-width: 3200px;
     height: 600px;
-}
-.swiper-wrapper {
-    display: flex;
-
-    overflow: hidden;
+    border: solid 1px black;
 }
 
 .swiper-slide {
@@ -64,35 +60,26 @@
     justify-content: center;
 
 }
-/* Card Slider Container */
-.card-slider-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; /* Prevent overflow */
-}
+
 
 /* Custom Swiper Buttons */
 .swiper-button {
     position: absolute;
     display: block;
-    height: 100%; /* Full height of the slider */
-    top: 50%;
+    height: 100px;
+    top: 40%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid 1px black;
+    color: var(--highlight-color-2);
     cursor: pointer;
     z-index: 10;
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    width: 50px; /* Fixed width for buttons */
+    width: 60px; 
 }
 
 .swiper-button:hover {
@@ -101,23 +88,12 @@
 
 .prev {
     left: 0;
+    border-left: none;
 }
 
 .next {
     right: 0;
+    border-right: none;
 }
 
-
-@media screen and (max-width: 1920px) {
-    .swiper {
-        /* max-width: calc(500*3px); */
-    }
-    
-}
-@media screen and (max-width: 1440px) {
-    .swiper {
-        /* max-width: calc(500*2px); */
-    }
-    
-}
 
