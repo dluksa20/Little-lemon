@@ -18,7 +18,7 @@ const CardSlider = () => {
     // Function to dynamically set slides per view based on screen width
     const updateSlidesPerView = () => {
         const screenWidth = window.innerWidth;
-        const containerWidth = screenWidth - 100; // Assuming the container takes 100% of the screen width
+        const containerWidth = screenWidth; // Assuming the container takes 100% of the screen width
         const maxSlides = Math.floor(containerWidth / cardWidth);
         setSlidesToShow(Math.min(Math.max(1, maxSlides), 5)); // Ensure at least 1 slide and at most 5 slides
     };
