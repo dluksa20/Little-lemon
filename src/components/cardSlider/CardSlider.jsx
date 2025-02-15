@@ -1,10 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './CardSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 import Card from "./Card";
 import cardData from './CardData';
 import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
@@ -40,10 +41,9 @@ const CardSlider = () => {
                     console.log("Swiper initialized:", swiper); // Debugging
                 }}
                 spaceBetween={0}
-                pagination={{ scrollable: true }}
-                navigation={false} // Disable default navigation
+                scrollbar={{hide: false,}}
                 slidesPerView={slidesToShow} // Dynamic slides per view
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation, Scrollbar]}
                 className="card-slider"
                 key={slidesToShow} // Force re-render when slidesToShow changes
             >

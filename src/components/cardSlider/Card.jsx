@@ -50,7 +50,7 @@ export default function Card(props) {
                         <div className="price-group">
                             <p className="item-price">{currency}{item_price}</p>
                         </div>
-                        <button className="cart">
+                        <button className="cart-btn">
                             <MdOutlineShoppingCart />
                             Add to Cart
                         </button>
